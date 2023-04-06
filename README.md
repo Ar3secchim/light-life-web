@@ -74,7 +74,7 @@ npm start
 
 **🏧 Server:**
 
-- [NestJS](https://github.com/nestjs/nest) `(REST)`
+- [Express](https://github.com/expressjs/express)
 - [Prisma](https://github.com/prisma/prisma)
 - [PostgreSQL](https://github.com/postgres) 
 
@@ -85,7 +85,7 @@ Até o momento, levando em consideração o prazo de 2 meses (Due: 05/07/2023), 
 
 ### Funcionalidades 1.0 (MVP): 
 
-- [ ] **Configuração  do projeto**
+- [x] **Configuração  do projeto**
         setup de mobile e back-end
         
 - [ ] **Autenticação google**
