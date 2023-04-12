@@ -1,6 +1,7 @@
 import {Router} from 'express';
-import { findAll } from './controllers/users/getUsers.js';
+import { create, findAll } from './controllers/users/index.js';
 
 export const routes = Router()
 
 routes.get('/', findAll)
+routes.post('/', create)
