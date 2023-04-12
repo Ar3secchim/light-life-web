@@ -7,8 +7,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "lint": "eslint --ext .js . --no-error-on-unmatched-pattern",
-    "lint:fix": "eslint --ext .js . --no-error-on-unmatched-pattern --fix"
+    "lint": "eslint --ext .js, .jsx . --no-error-on-unmatched-pattern",
+    "lint:fix": "eslint --ext .js, .jsx  . --no-error-on-unmatched-pattern --fix"
   },
   "dependencies": {
     "expo": "~48.0.10",
@@ -20,7 +20,12 @@
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@rocketseat/eslint-config": "^1.2.0",
-    "eslint": "^8.37.0",
+    "eslint": "^8.38.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
     "tailwindcss": "^3.3.1"
   },
   "private": false
