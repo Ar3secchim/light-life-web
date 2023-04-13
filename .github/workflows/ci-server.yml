@@ -1,0 +1,37 @@
+name:  CI - Server
+
+on:
+  push:
+    paths:
+      - 'apps/server/**'
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'apps/server/**'
+    branches:
+      - '**'
+  schedule:
+    - cron: '16 14 * * 5'
+
+jobs:
+  eslint:
+    name: Run eslint scanning
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Run directory
+        run: cd apps/server
+
+      - name: Install dependenci
+        run: npm install
+        
+      - name: Run ESLint
+        run: npm lint   
