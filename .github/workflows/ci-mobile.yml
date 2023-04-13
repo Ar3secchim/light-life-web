@@ -30,6 +30,5 @@ jobs:
 
       - name: Lint 
         working-directory: ./apps/mobile
-        run: cd apps/mobile
         run: npm install
         run: npm run lint

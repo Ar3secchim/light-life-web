@@ -31,6 +31,5 @@ jobs:
 
       - name: Lint 
         working-directory: ./apps/server
-        run: cd apps/server
         run: npm install
         run: npm run lint
