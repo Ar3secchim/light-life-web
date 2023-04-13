@@ -29,9 +29,6 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
-        
-      - name: Run directory
-        run: cd apps/server
 
       - name: Install dependencias
         run: npm install

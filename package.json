@@ -1,4 +1,12 @@
 {
+  "name": "project-77",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Repositorio do app para o projeto 77 Days",
+  "license": "MIT",
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
     "husky:prepare": "husky install"
   },
