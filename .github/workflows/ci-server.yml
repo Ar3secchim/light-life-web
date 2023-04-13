@@ -30,9 +30,8 @@ jobs:
           node-version: 18
           cache: 'npm'
 
-      - run: npm ci # or yarn install
-      - uses: sibiraj-s/action-eslint@v2
-        with:
-          eslint-args: '--ignore-path=.gitignore --quiet'
-          extensions: 'js,jsx'
-          annotations: true
+    - name: Install modules
+      run: npm install
+
+    - name: Run ESLint
+      run: eslint . --ext .js, --fix
