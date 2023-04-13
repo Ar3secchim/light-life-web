@@ -1,4 +1,4 @@
-name:  CI - Mobile
+name: CI - Mobile
 
 on:
   push:
@@ -12,17 +12,12 @@ on:
       - 'apps/mobile/**'
     branches:
       - '**'
-  schedule:
-    - cron: '16 14 * * 5'
 
 jobs:
-  eslint:
-    name: Run eslint scanning
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      security-events: write
-      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
+
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -30,8 +25,9 @@ jobs:
           node-version: 18
           cache: 'npm'
 
-     - name: Clean install dependencies
+      - name: Clean install dependencies
         run: npm ci
-
-      - name: Lint 
+g
+      - name: Lint & Check types
         run: npm run lint
+        working-directory: ./apps/mobile
