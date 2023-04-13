@@ -1,5 +1,5 @@
-import {Router} from 'express';
-import { create, findAll } from './controllers/users/index.js';
+import { Router } from 'express'
+import { create, findAll } from './controllers/users/index.js'
 
 export const routes = Router()
 
