@@ -7,8 +7,8 @@
   "scripts": {
     "start": "node --watch index.js",
     "test": "test",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.js\" --no-error-on-unmatched-pattern",
-    "lint:fix": "eslint \"{src,apps,libs,test}/**/*.js\" --no-error-on-unmatched-pattern --fix"
+    "lint": "eslint .js . --no-error-on-unmatched-pattern",
+    "lint:fix": "eslint .js . --no-error-on-unmatched-pattern --fix"
   },
   "author": "",
   "license": "ISC",
