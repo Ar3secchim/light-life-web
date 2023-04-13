@@ -30,12 +30,9 @@ jobs:
           node-version: 18
           cache: 'npm'
 
-      - name: Install dependencias
-        run: npm install
-        
-      - name: Run ESLint
-        run: npm run lint -- --format=sarif
+      - run: npm ci # or yarn install
+      - uses: sibiraj-s/action-eslint@v2
         with:
-          node-version: 18
-          cache: 'npm'
-          
+          eslint-args: '--ignore-path=.gitignore --quiet'
+          extensions: 'js,jsx'
+          annotations: true
