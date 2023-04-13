@@ -5,7 +5,7 @@ export const findAll = async (req, res) => {
   res.status(200).end(JSON.stringify(user))
 }
 
-export const createUser = async (req, res) => {
+export const create = async (req, res) => {
   const newUser = await prisma.user.create({
     data: {
       name: req.body.name,
