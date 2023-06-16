@@ -46,7 +46,7 @@ npm run start:dev
 
 ### Mobile
 
-Para executar o app mobile do RS/XP utilizamos o Expo, uma ferramenta incrível da comunidade React Native. Além do Expo, é necessário que você utilize algum emulador local ou um dispositivo físico pra visualizar a aplicação.
+Para executar o app mobile utilizamos o Expo, uma ferramenta incrível da comunidade React Native. Além do Expo, é necessário que você utilize algum emulador local ou um dispositivo físico pra visualizar a aplicação.
 
 > Você pode instalar o Expo e os emuladores seguindo esse guia.
 
