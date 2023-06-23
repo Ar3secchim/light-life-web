@@ -3,7 +3,7 @@ name: CI - Mobile
 on:
   push:
     paths:
-      - 'apps/mobile/**'
+      - 'apps/mobile-pwa/**'
     branches:
       - main
   pull_request:
