@@ -3,7 +3,7 @@ function App() {
   return (
     <>
       <span className=" font-poppins flex items-center text-3xl text-primary">
-        Hellou Word!!
+        Desistindo de assinar o git
       </span>
       <div className="btm-nav">
         <button>
