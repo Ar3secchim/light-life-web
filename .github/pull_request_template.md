@@ -1,7 +1,5 @@
 ## 📃 Descrição
 
-copilot:summary
-
 - [ ] Como isso foi testado
 - [ ] Bug fix
 - [ ] Nova feature

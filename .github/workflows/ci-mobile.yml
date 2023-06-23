@@ -3,15 +3,15 @@ name: CI - Mobile
 on:
   push:
     paths:
-      - 'apps/mobile/**'
+      - "apps/mobile/**"
     branches:
       - main
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
-      - 'apps/mobile/**'
+      - "apps/mobile/**"
     branches:
-      - '**'
+      - "**"
 
 jobs:
   lint:
@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'npm'
+          cache: "npm"
 
       - name: Clean install dependencies
         run: npm install
