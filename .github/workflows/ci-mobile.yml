@@ -9,7 +9,7 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
-      - 'apps/mobile/**'
+      - 'apps/mobile-pwa/**'
     branches:
       - '**'
 
