@@ -3,13 +3,13 @@ name: CI - Mobile
 on:
   push:
     paths:
-      - 'apps/mobile-pwa/**'
+      - 'apps/mobile/**'
     branches:
       - main
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
-      - 'apps/mobile-pwa/**'
+      - 'apps/mobile/**'
     branches:
       - '**'
 
