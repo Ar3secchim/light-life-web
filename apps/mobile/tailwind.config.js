@@ -3,6 +3,9 @@
 module.exports = {
   content: ['./src/**/*.{html,jsx}'],
   theme: {
+    container: {
+      padding: '1.5rem',
+    },
     extend: {},
     screens: {
       sm: '480px',
@@ -20,7 +23,7 @@ module.exports = {
         "mytheme": {
           "primary": '#32470C',
           "secondary": '#e5e7eb',
-          "terciary":'#32470C',
+          "terciary": '#3E4F1F',
           "accent": '#aed62a',
           "neutral": '#18181B',
           'base-100': '#18181B',

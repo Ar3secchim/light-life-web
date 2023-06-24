@@ -1,23 +1,7 @@
-import { AiOutlineHome, AiOutlineBulb, AiOutlineProfile } from 'react-icons/ai'
+import AppRoutes from '../Routes'
+
 function App() {
-  return (
-    <>
-      <span className=" font-poppins flex items-center text-3xl text-primary">
-        Desistindo de assinar o git
-      </span>
-      <div className="btm-nav">
-        <button>
-          <AiOutlineHome />
-        </button>
-        <button className="active">
-          <AiOutlineBulb />
-        </button>
-        <button>
-          <AiOutlineProfile />
-        </button>
-      </div>
-    </>
-  )
+  return <AppRoutes />
 }
 
 export default App
