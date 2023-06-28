@@ -45,16 +45,6 @@ function Home() {
                 Ler 10 páginas
               </span>
             </label>
-
-            <label className="cursor-pointer flex items-center gap-6 my-3">
-              <input
-                onClick={(event) => setCheck(event.target.value)}
-                type="checkbox"
-                checked=""
-                className="checkbox checkbox-lg checkbox-primary"
-              />
-              <p className="text-lg">Rotina matinal</p>
-            </label>
           </div>
         </div>
       </section>

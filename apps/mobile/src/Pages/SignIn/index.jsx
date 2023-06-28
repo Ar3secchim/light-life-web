@@ -37,13 +37,13 @@ function SignIn() {
 
         <Link className="text-accent text-base mt-6">Esqueceu a senha?</Link>
 
-        <Link to={'/signin'} className="w-full">
+        <Link to={'/home'} className="w-full">
           <button className="btn btn-primary w-full mt-6">Entrar</button>
         </Link>
 
         <p className="text-sm mt-6">
           Não tem uma conta ?
-          <Link className="text-accent text-sm"> Cadastra-se aqui</Link>
+          <Link className="text-accent text-sm">Cadastra-se aqui</Link>
         </p>
       </section>
     </main>
