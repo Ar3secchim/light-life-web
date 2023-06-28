@@ -6,7 +6,7 @@ function Input(props) {
           <input
             type="checkbox"
             checked={props?.checked}
-            className="checkbox checkbox-accent"
+            className="checkbox-accent checkbox"
           />
           <span className="label-text pl-4">{props.placeholder}</span>
         </label>
@@ -14,7 +14,7 @@ function Input(props) {
         <input
           type={props.type}
           placeholder={props?.placeholder}
-          className="input focus:input-accent border-gray-700"
+          className="input border-gray-700 focus:input-accent"
         />
       )}
     </div>

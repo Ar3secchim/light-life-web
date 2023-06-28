@@ -6,7 +6,7 @@ function PageInto() {
   return (
     <main className="container">
       <img
-        className="z-0 relative -top-6 -left-6"
+        className="relative -left-6 -top-6 z-0"
         src={ElipseSuperior}
         alt="Elipses verdes no canto superior esquerdo"
       />
@@ -16,10 +16,10 @@ function PageInto() {
           src={IlustracaoPageInto}
           alt="ilustração de um rapaz moreno sentado em uma poltrona verde e mexendo no celular"
         />
-        <div className="flex flex-col justify-center items-center gap-4">
+        <div className="flex flex-col items-center justify-center gap-4">
           <h1
-            className="text-center text-lg text-secondary font-semibold flex
-          justify-center"
+            className="flex justify-center text-center text-lg font-semibold
+          text-secondary"
           >
             FAÇA DA SUA MELHOR VERSÃO
           </h1>
@@ -28,7 +28,7 @@ function PageInto() {
             a alta performance pessoal e profissional.
           </h3>
           <Link to={'/signin'}>
-            <button className="btn btn-primary btn-wide mt-6 ">
+            <button className="btn-primary btn-wide btn mt-6 ">
               Vamos começar
             </button>
           </Link>

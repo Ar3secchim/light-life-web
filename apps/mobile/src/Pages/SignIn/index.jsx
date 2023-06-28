@@ -7,34 +7,34 @@ function SignIn() {
   return (
     <main className="container">
       <img
-        className="z-0 relative -top-6 -left-6"
+        className="relative -left-6 -top-6 z-0"
         src={ElipseSuperior}
         alt="Elipses verdes no canto superior esquerdo"
       />
-      <section className="relative z-1 -top-20 flex flex-col justify-center items-center">
-        <h1 className="text-2xl mb-5 ">Seja Bem Vindo</h1>
+      <section className="z-1 relative -top-20 flex flex-col items-center justify-center">
+        <h1 className="mb-5 text-2xl ">Seja Bem Vindo</h1>
         <img
           src={IlustracaoSignIn}
           alt="Rapaz em pé parco com camisa branca e calça verde apontando para um gradro branco "
         />
 
-        <form className="flex flex-col gap-6 mt-4 w-full">
+        <form className="mt-4 flex w-full flex-col gap-6">
           <Input type="text" placeholder="Email" />
 
           <Input type="password" placeholder="Senha" />
         </form>
 
-        <Link className="text-accent text-base mt-6">Esqueceu a senha?</Link>
+        <Link className="mt-6 text-base text-accent">Esqueceu a senha?</Link>
 
         <Link to={'/home'} className="w-full">
-          <button className="btn btn-primary w-full mt-6" type="submit">
+          <button className="btn-primary btn mt-6 w-full" type="submit">
             Entrar
           </button>
         </Link>
 
-        <p className="text-sm mt-6">
+        <p className="mt-6 text-sm">
           Não tem uma conta ?
-          <Link to={'/register'} className="text-accent text-sm pl-1">
+          <Link to={'/register'} className="pl-1 text-sm text-accent">
             Cadastra-se aqui
           </Link>
         </p>

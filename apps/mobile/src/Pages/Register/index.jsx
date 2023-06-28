@@ -6,13 +6,13 @@ function Register() {
   return (
     <main className="container">
       <img
-        className="z-0 relative -top-6 -left-6"
+        className="relative -left-6 -top-6 z-0"
         src={ElipseSuperior}
         alt="Elipses verdes no canto superior esquerdo"
       />
-      <section className="relative z-1 -top-6 flex flex-col justify-center items-center">
-        <h1 className="text-2xl mb-5 ">Se cadastre aqui</h1>
-        <form className="flex flex-col gap-6 mt-4 w-full">
+      <section className="z-1 relative -top-6 flex flex-col items-center justify-center">
+        <h1 className="mb-5 text-2xl ">Se cadastre aqui</h1>
+        <form className="mt-4 flex w-full flex-col gap-6">
           <Input type="text" placeholder="Primeiro nome" />
 
           <Input type="password" placeholder="Senha" />
@@ -23,7 +23,7 @@ function Register() {
         </form>
 
         <Link className="w-full">
-          <button className="btn btn-primary w-full mt-6" type="submit">
+          <button className="btn-primary btn mt-6 w-full" type="submit">
             Entrar
           </button>
         </Link>

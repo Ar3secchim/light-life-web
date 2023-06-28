@@ -7,12 +7,12 @@ import {
 
 function NavBar() {
   return (
-    <div className="btm-nav  btm-nav-md bg-primary rounded-t-3xl">
+    <div className="btm-nav btm-nav-md rounded-t-3xl bg-primary">
       <button>
         <AiOutlineHome size={22} />
         <span className="text-sm">Home </span>
       </button>
-      <button className="active text-primary font-bold">
+      <button className="active font-bold text-primary">
         <AiOutlineFileDone size={22} />
         <span className="text-sm">Taks</span>
       </button>
