@@ -20,17 +20,17 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        "mytheme": {
-          "primary": '#32470C',
-          "secondary": '#e5e7eb',
-          "terciary": '#3E4F1F',
-          "accent": '#aed62a',
-          "neutral": '#18181B',
+        mytheme: {
+          primary: '#32470C',
+          secondary: '#e5e7eb',
+          terciary: '#3E4F1F',
+          accent: '#aed62a',
+          neutral: '#18181B',
           'base-100': '#18181B',
-          "info": '#a3e635',
-          "success": '#65a30d',
-          "warning": '#fbbf24',
-          "error": '#eb3761',
+          info: '#a3e635',
+          success: '#65a30d',
+          warning: '#fbbf24',
+          error: '#eb3761',
         },
       },
     ],

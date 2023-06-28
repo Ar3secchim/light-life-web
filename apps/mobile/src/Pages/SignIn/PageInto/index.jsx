@@ -4,9 +4,9 @@ import IlustracaoPageInto from '../../../assets/SignIn/ilustratorPageInto.png'
 
 function PageInto() {
   return (
-    <main>
+    <main className="container">
       <img
-        className="z-0 relative -top-6 -left-5"
+        className="z-0 relative -top-6 -left-6"
         src={ElipseSuperior}
         alt="Elipses verdes no canto superior esquerdo"
       />

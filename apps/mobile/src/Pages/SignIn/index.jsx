@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Input from '../../Components/Inputs'
 import ElipseSuperior from '../../assets/SignIn/elipse-superior.png'
 import IlustracaoSignIn from '../../assets/SignIn/ilustratorSingIn.png'
 
@@ -18,32 +19,24 @@ function SignIn() {
         />
 
         <form className="flex flex-col gap-6 mt-4 w-full">
-          <div className="form-control">
-            <input
-              type="text"
-              placeholder="Digite seu email?"
-              className="input focus:input-accent border-gray-700 "
-            />
-          </div>
+          <Input type="text" placeholder="Email" />
 
-          <div className="form-control">
-            <input
-              type="text"
-              placeholder="Digite sua senha"
-              className="input  border-gray-700  focus:input-accent"
-            />
-          </div>
+          <Input type="password" placeholder="Senha" />
         </form>
 
         <Link className="text-accent text-base mt-6">Esqueceu a senha?</Link>
 
         <Link to={'/home'} className="w-full">
-          <button className="btn btn-primary w-full mt-6">Entrar</button>
+          <button className="btn btn-primary w-full mt-6" type="submit">
+            Entrar
+          </button>
         </Link>
 
         <p className="text-sm mt-6">
           Não tem uma conta ?
-          <Link className="text-accent text-sm">Cadastra-se aqui</Link>
+          <Link to={'/register'} className="text-accent text-sm pl-1">
+            Cadastra-se aqui
+          </Link>
         </p>
       </section>
     </main>
