@@ -11,7 +11,7 @@ function SignIn() {
         src={ElipseSuperior}
         alt="Elipses verdes no canto superior esquerdo"
       />
-      <section className="z-1 relative -top-20 flex flex-col items-center justify-center">
+      <section className="z-1 relative -top-24 flex flex-col items-center justify-center">
         <h1 className="mb-5 text-2xl ">Seja Bem Vindo</h1>
         <img
           src={IlustracaoSignIn}

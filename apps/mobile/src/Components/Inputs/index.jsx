@@ -6,7 +6,7 @@ function Input(props) {
           <input
             type="checkbox"
             checked={props?.checked}
-            className="checkbox-accent checkbox"
+            className="checkbox-accent checkbox  "
           />
           <span className="label-text pl-4">{props.placeholder}</span>
         </label>

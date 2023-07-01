@@ -14,17 +14,14 @@ function Register() {
         <h1 className="mb-5 text-2xl ">Se cadastre aqui</h1>
         <form className="mt-4 flex w-full flex-col gap-6">
           <Input type="text" placeholder="Primeiro nome" />
-
-          <Input type="password" placeholder="Senha" />
-
           <Input type="email" placeholder="Email" />
-
+          <Input type="password" placeholder="Senha" />
           <Input type="checkbox" placeholder="Aceito Termos e condições" />
         </form>
 
-        <Link className="w-full">
+        <Link to={'/signin'} className="w-full">
           <button className="btn-primary btn mt-6 w-full" type="submit">
-            Entrar
+            Cadastrar
           </button>
         </Link>
       </section>
