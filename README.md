@@ -107,3 +107,8 @@ Email: renarasecchim@gmail.com
 
 Conecte-se comigo [Linkedin](https://www.linkedin.com/in/renarasecchim/)
 
+
+## (c) License
+
+MIT License
+Copyright (c) 2023 Renara Secchim
