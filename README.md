@@ -1,23 +1,59 @@
 # Project 77days
-Um app que faz o acompanhamento de restramento de tasks (hábitos) realizados durante 77 dias. Que tem como obejetivo mostrar ao cliente um dashboard de checks das atividades e porcetagem de aproveitamento.
+
+## 📃 Descrição geral
+
+Um app que faz o acompanhamento de restramento de tasks (hábitos) realizados durante 77 dias. Que tem como obejetivo mostrar ao usuário um dashboard de checks das atividades e porcetagem de aproveitamento  dos dias já executados, além de dar um feedbacks para usuário aonde eles esteja errando mais durando o processo dele nesse desafio dos 77 Days.
+
+Esse app foi pensado para resolver um problema meu durante os meus rastreamentos de novos hábitos durante um determinado e ter um acompanhemento de gráficos e saber como está minha evolução e como eu poderia melhorar durante o desafio.
 
 &nbsp;
-## Screenshot
+### Screenshot
 
 ![Group 2517](https://github.com/Ar3secchim/project-77-days/assets/82913620/d0979d6e-410a-4d4a-96cf-2f1f955910df)
 
 &nbsp;
-## Executando o projeto
 
+## 🚀 Requisitos
+
+### 1. Requisitos funcionais principais pensados para entrega do mvp:
+- [ ] Os usuários devem poder criar uma lista de tarefas/hábitos para rastrear durante os 77 dias.
+- [ ] Os usuários devem poder marcar as tarefas concluídas diariamente.
+- [ ] O aplicativo deve calcular a porcentagem de aproveitamento dos dias concluídos.
+- [ ] O aplicativo deve fornecer um dashboard com gráficos e estatísticas sobre o desempenho do usuário.
+- [ ] O aplicativo deve oferecer feedback ao usuário sobre áreas em que ele pode melhorar.
+- [ ] Autenticação google
+- [ ] Ser um Pwa (progressive web app development)  -> [Learn Pwa](https://web.dev/learn/pwa/)
+
+### 2. Requisitos não funcionais:
+  - [ ] A interface do usuário deve ser intuitiva e fácil de usar.
+  - [ ] O aplicativo deve ser responsivo e funcionar em maiorias dos dispositivos móveis.
+  - [ ] O aplicativo deve ser seguro, protegendo os dados do usuário.
+
+&nbsp;
+
+## 🔨 Arquitetura
+
+- O aplicativo é desenvolvido utilizando uma arquitetura cliente-servidor.
+- O cliente é aplicativo móvel desenvolvido para PWA com react.
+- O servidor utiliza uma arquitetura RESTful, com uma API para lidar com as solicitações do cliente e armazenar os dados em um banco de dados MySQL.
+
+&nbsp;
+
+## 💻 Executando o projeto
+
+### Front end
 Abaixo seguem as instruções para você executar o projeto na sua máquina.
 
 Comece clonando o repositório e instalando suas dependências:
 
 ```sh
 git clone https://github.com/Ar3secchim/project-77-days.git
+
 cd project-77-days.git
+
 npm install
 ```
+
 &nbsp;
 
 ### Back-end
@@ -26,84 +62,53 @@ O back-end desse projeto é construído em Node.js, mais especificamente sua ver
 
 > Você pode instalar o Node.js seguindo [esse guia](https://efficient-sloth-d85.notion.site/Instalando-o-Node-js-d40fdabe8f0a491eb33b85da93d90a2f).
 
-Além do Node.js, utilizamos o banco de dados PostgreSQL e **recomendamos** o uso do Docker para executar o banco em sua máquina.
-
-> Você pode instalar o Docker seguindo [esse guia](https://www.youtube.com/watch?v=Gpal5KsSHMQ).
-
-Após instalar o Node.js e o Docker, vamos acessar a pasta do projeto back-end, subir o serviço do banco de dados, configurar nossas variáveis ambiente e, então, subir o servidor HTTP.
+Além do Node.js, utilizamos o banco de dados MySql vis ORM Prisma
 
 ```sh
 cd apps/server
 
 # Copiar o arquivo com os dados de conexão e demais variáveis ambiente
-cp .env.example .env
-
-# Subir o serviço do PostgreSQL via docker (caso não tenha instalado o PostgreSQL em seu computador)
-docker compose up -d
+mrkdir .env.example .env
 
 # Subir o servidor HTTP
-npm run start:dev
-```
-
-### Mobile
-
-Para executar o app mobile utilizamos o Expo, uma ferramenta incrível da comunidade React Native. Além do Expo, é necessário que você utilize algum emulador local ou um dispositivo físico pra visualizar a aplicação.
-
-> Você pode instalar o Expo e os emuladores seguindo esse guia.
-
-
-Após configurar o ambiente mobile, você pode abrir o emulador e executar o projeto de acordo com a plataforma que estiver utilizando:
-
-```sh
-# Caso esteja usando Android
-npm run android
-
-# Caso esteja usando iOS
-npm run ios
-
-# Caso esteja usando um dispositivo físico
-npm start
+npm run start
 ```
 
 &nbsp;
+
 ## 💜 Tech Stack 
 
 **📱 Mobile:**
 
-- [Expo](https://github.com/expo/expo)
-- [NativeWind](https://github.com/marklawlor/nativewind) _(Tailwind para o React Native)_
+- [React](https://github.com/facebook/react/)
+- [Tailwind](https://github.com/tailwindlabs/tailwindcss)
 
 **🏧 Server:**
 
 - [Express](https://github.com/expressjs/express)
 - [Prisma](https://github.com/prisma/prisma)
-- [PostgreSQL](https://github.com/postgres) 
+- [Mysql](https://github.com/mysql) 
 
 &nbsp;
 
-## 🚀 Funcionalidades: 
-Até o momento, levando em consideração o prazo de 2 meses (Due: 05/07/2023), listamos algumas funcionalidades básicas para ser entregue.
+## 🔮 Libs adicionais
 
-### Funcionalidades 1.0 (MVP): 
-
-- [x] **Configuração  do projeto**
-        setup de mobile e back-end
-        
-- [ ] **Autenticação google**
-
-- [ ] **Dashboard de atividades**
-      Criar uma tela que estára todas as tasks que precisão ser feitas
-      
-- [ ] **Feed de progresso**
-      Criar uma tela para mostrar o progresso e a porcetagem de aproveitamento do projeto
-
-- [ ] **Configuração  da data do projeto**
-        Criar um formulário para a configuração do inicio e fim do projeto
+- DaisyUI -> matreial UI baseado no Tailwind com modo dark/ligth automático
+- Prisma como ORM 
+- Deploy na Vercel
+- PlanetScale como o Banco de dados (mysql)
+- StoryBook para documentação de componentes
 
 
-## Feedback
-Este projeto faz parte do meu portfólio, ficarei feliz em receber feedback sobre o projeto, sobre os códigos, estrutura ou qualquer coisa que me ajude a evoluir para me tornar uma desenvolvedora melhor
+## 💬 Feedback
+Este projeto faz parte do meu portfólio, ficarei feliz em receber feedback sobre o projeto, sobre os códigos, estrutura ou qualquer coisa que me ajude a evoluir para me tornar uma desenvolvedora melhor. Abre uma PR ai ou um issues.
 
-Email: renarasecchim@hotmail.com
+Email: renarasecchim@gmail.com
 
 Conecte-se comigo [Linkedin](https://www.linkedin.com/in/renarasecchim/)
+
+
+## (c) License
+
+MIT License
+Copyright (c) 2023 Renara Secchim
