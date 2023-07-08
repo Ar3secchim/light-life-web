@@ -1,9 +1,29 @@
+import { yupResolver } from '@hookform/resolvers/yup'
+import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
+import * as yup from 'yup'
+
 import Input from '../../Components/Inputs'
 import ElipseSuperior from '../../assets/SignIn/elipse-superior.png'
 import IlustracaoSignIn from '../../assets/SignIn/ilustratorSingIn.png'
 
+const schema = yup
+  .object({
+    email: yup.string().required(),
+    password: yup.number().required(),
+  })
+  .required()
+
 function SignIn() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  })
+  const onSubmit = (data) => console.log(data)
+
   return (
     <main className="container">
       <img
@@ -18,10 +38,19 @@ function SignIn() {
           alt="Rapaz em pé parco com camisa branca e calça verde apontando para um gradro branco "
         />
 
-        <form className="mt-4 flex w-full flex-col gap-6">
-          <Input type="text" placeholder="Email" />
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="mt-4 flex w-full flex-col gap-6"
+        >
+          <Input {...register('email')} type="text" placeholder="Email" />
+          <p>{errors.email?.message}</p>
 
-          <Input type="password" placeholder="Senha" />
+          <Input
+            {...register('password')}
+            type="password"
+            placeholder="Senha"
+          />
+          <p>{errors.password?.message}</p>
         </form>
 
         <Link className="mt-6 text-base text-accent">Esqueceu a senha?</Link>
