@@ -16,7 +16,7 @@ function Input({ ...props }) {
           type={props.type}
           placeholder={props?.placeholder}
           className="input border-gray-700 focus:input-accent"
-          {...props?.value}
+          {...props}
         />
       )}
     </div>

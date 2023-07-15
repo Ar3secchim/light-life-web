@@ -1,7 +1,7 @@
+import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import { z } from 'zod'
-import { zodResolver } from '@hookform/resolvers/zod'
 
 import ElipseSuperior from '../../assets/SignIn/elipse-superior.png'
 import IlustracaoSignIn from '../../assets/SignIn/ilustratorSingIn.png'
@@ -27,7 +27,7 @@ function SignIn() {
   })
 
   function createUser(data) {
-    console.log(JSON.stringify(data, null, 2))
+    return <pre>{JSON.stringify(data, null, 2)}</pre>
   }
 
   return (
@@ -54,17 +54,28 @@ function SignIn() {
             type="text"
             placeholder="Email"
           />
-          {errors.email && <span>{errors.email.message}</span>}
+          {errors.email && (
+            <span className="text-base text-accent">
+              {errors.email.message}
+            </span>
+          )}
 
           <input
             className="input border-gray-700 focus:input-accent"
             type="password"
-            placeholder="Senha"
+            placeholder="password"
             {...register('password')}
           />
-          {errors.email && <span>{errors.password.message}</span>}
 
-          <Link className="mt-6 text-base text-accent">Esqueceu a senha?</Link>
+          {errors.password && (
+            <span className="text-base text-accent">
+              {errors.password.message}
+            </span>
+          )}
+
+          <Link className="mt-6 text-center text-base text-accent">
+            Esqueceu a senha?
+          </Link>
 
           <button className="btn-primary btn mt-6 w-full" type="submit">
             Entrar
