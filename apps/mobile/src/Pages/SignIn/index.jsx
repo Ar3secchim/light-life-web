@@ -3,6 +3,10 @@ import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import { z } from 'zod'
 
+import { Button } from '@/Components/ui/button'
+import { Input } from '@/Components/ui/input'
+import { ChevronLeftIcon } from "@radix-ui/react-icons"
+
 import ElipseSuperior from '../../assets/SignIn/elipse-superior.png'
 import IlustracaoSignIn from '../../assets/SignIn/ilustratorSingIn.png'
 
@@ -18,6 +22,7 @@ const schemaSiginUserForm = z.object({
 })
 
 function SignIn() {
+  const form = useForm()
   const {
     register,
     handleSubmit,
@@ -32,8 +37,14 @@ function SignIn() {
 
   return (
     <main className="container">
+      <Link to={'/'}>
+        <Button variant="ghost" className="absolute left-1 top-2 z-10">
+          <ChevronLeftIcon className="h-6 w-6" />
+        </Button>
+      </Link>
+
       <img
-        className="relative -left-6 -top-6 z-0"
+        className="relative -left-8 z-0"
         src={ElipseSuperior}
         alt="Elipses verdes no canto superior esquerdo"
       />
@@ -44,47 +55,50 @@ function SignIn() {
           alt="Rapaz em pé parco com camisa branca e calça verde apontando para um gradro branco "
         />
 
-        <form
-          onSubmit={handleSubmit(createUser)}
-          className="mt-4 flex w-full flex-col gap-6"
-        >
-          <input
-            className="input border-gray-700 focus:input-accent"
-            {...register('email')}
-            type="text"
-            placeholder="Email"
-          />
-          {errors.email && (
-            <span className="text-base text-accent">
-              {errors.email.message}
-            </span>
-          )}
+       
+          <form
+            onSubmit={handleSubmit(createUser)}
+            className="mt-4 flex w-full flex-col gap-6"
+          >
+             
+            <Input
+              {...register('email')}
+              type="Email"
+              placeholder="Email"
+            />
 
-          <input
-            className="input border-gray-700 focus:input-accent"
-            type="password"
-            placeholder="password"
-            {...register('password')}
-          />
+            {errors.email && (
+              <span className="text-xs -mt-4">
+                {errors.email.message}
+              </span>
+            )}
 
-          {errors.password && (
-            <span className="text-base text-accent">
-              {errors.password.message}
-            </span>
-          )}
+            <Input
+              type="password"
+              placeholder="password"
+              {...register('password')}
+            />
 
-          <Link className="mt-6 text-center text-base text-accent">
-            Esqueceu a senha?
-          </Link>
+            {errors.password && (
+              <span className="text-xs -mt-4">
+                {errors.password.message}
+              </span>
+            )}
 
-          <button className="btn-primary btn mt-6 w-full" type="submit">
-            Entrar
-          </button>
-        </form>
+            <Button variant="link" className="decoration-emerald-900">
+              Esqueceu a senha?
+            </Button>
+            
+            <Link to={'/user'} className='w-full'>
+              <Button size="lg" type="submit" className="w-full">
+                Entrar
+              </Button>
+            </Link>
+          </form>
 
         <p className="mt-6 text-sm">
           Não tem uma conta ?
-          <Link to={'/register'} className="pl-1 text-sm text-accent">
+          <Link to={'/register'} className="decoration-emerald-900 underline pl-1 text-sm">
             Cadastra-se aqui
           </Link>
         </p>
