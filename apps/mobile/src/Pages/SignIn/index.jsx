@@ -5,7 +5,7 @@ import { z } from 'zod'
 
 import { Button } from '@/Components/ui/button'
 import { Input } from '@/Components/ui/input'
-import { ChevronLeftIcon } from "@radix-ui/react-icons"
+import { ChevronLeftIcon } from '@radix-ui/react-icons'
 
 import ElipseSuperior from '../../assets/SignIn/elipse-superior.png'
 import IlustracaoSignIn from '../../assets/SignIn/ilustratorSingIn.png'
@@ -22,7 +22,6 @@ const schemaSiginUserForm = z.object({
 })
 
 function SignIn() {
-  const form = useForm()
   const {
     register,
     handleSubmit,
@@ -55,50 +54,43 @@ function SignIn() {
           alt="Rapaz em pé parco com camisa branca e calça verde apontando para um gradro branco "
         />
 
-       
-          <form
-            onSubmit={handleSubmit(createUser)}
-            className="mt-4 flex w-full flex-col gap-6"
-          >
-             
-            <Input
-              {...register('email')}
-              type="Email"
-              placeholder="Email"
-            />
+        <form
+          onSubmit={handleSubmit(createUser)}
+          className="mt-4 flex w-full flex-col gap-6"
+        >
+          <Input {...register('email')} type="Email" placeholder="Email" />
 
-            {errors.email && (
-              <span className="text-xs -mt-4">
-                {errors.email.message}
-              </span>
-            )}
+          {errors.email && (
+            <span className="-mt-4 text-xs">{errors.email.message}</span>
+          )}
 
-            <Input
-              type="password"
-              placeholder="password"
-              {...register('password')}
-            />
+          <Input
+            type="password"
+            placeholder="password"
+            {...register('password')}
+          />
 
-            {errors.password && (
-              <span className="text-xs -mt-4">
-                {errors.password.message}
-              </span>
-            )}
+          {errors.password && (
+            <span className="-mt-4 text-xs">{errors.password.message}</span>
+          )}
 
-            <Button variant="link" className="decoration-emerald-900">
-              Esqueceu a senha?
+          <Button variant="link" className="decoration-emerald-900">
+            Esqueceu a senha?
+          </Button>
+
+          <Link to={'/user'} className="w-full">
+            <Button size="lg" type="submit" className="w-full">
+              Entrar
             </Button>
-            
-            <Link to={'/user'} className='w-full'>
-              <Button size="lg" type="submit" className="w-full">
-                Entrar
-              </Button>
-            </Link>
-          </form>
+          </Link>
+        </form>
 
         <p className="mt-6 text-sm">
           Não tem uma conta ?
-          <Link to={'/register'} className="decoration-emerald-900 underline pl-1 text-sm">
+          <Link
+            to={'/register'}
+            className="pl-1 text-sm underline decoration-emerald-900"
+          >
             Cadastra-se aqui
           </Link>
         </p>

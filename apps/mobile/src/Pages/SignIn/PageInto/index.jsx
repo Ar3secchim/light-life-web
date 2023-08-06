@@ -29,7 +29,7 @@ function PageInto() {
             O passo a passo que você precisa para mudar seus hábitos e alcançar
             a alta performance pessoal e profissional.
           </h3>
-          <Link to={'/signin'} className='w-full'>
+          <Link to={'/signin'} className="w-full">
             <Button variant="secondary" size="lg" className="w-full">
               entre aqui
             </Button>

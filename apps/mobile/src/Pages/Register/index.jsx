@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 import { z } from 'zod'
 
 import { Button } from '@/Components/ui/button'
-import { Checkbox } from "@/Components/ui/checkbox"
+import { Checkbox } from '@/Components/ui/checkbox'
 import { Input } from '@/Components/ui/input'
-import { ChevronLeftIcon } from "@radix-ui/react-icons"
+import { ChevronLeftIcon } from '@radix-ui/react-icons'
 
 import ElipseSuperior from '../../assets/SignIn/elipse-superior.png'
 
@@ -62,31 +62,29 @@ function Register() {
             type="text"
             placeholder="Primeiro nome"
           />
-          {errors.name && <span className="text-xs -mt-4">{errors.name.message}</span>}
+          {errors.name && (
+            <span className="-mt-4 text-xs">{errors.name.message}</span>
+          )}
 
-          <Input
-          
-            {...register('email')}
-            type="email"
-            placeholder="Email"
-          />
-          {errors.email && <span className="text-xs -mt-4">{errors.email.message}</span>}
+          <Input {...register('email')} type="email" placeholder="Email" />
+          {errors.email && (
+            <span className="-mt-4 text-xs">{errors.email.message}</span>
+          )}
 
           <Input
             {...register('password')}
             type="password"
             placeholder="Senha"
           />
-          {errors.password && <span className="text-xs -mt-4">{errors.password.message}</span>}
+          {errors.password && (
+            <span className="-mt-4 text-xs">{errors.password.message}</span>
+          )}
           <label className=" flex justify-center">
-            <Checkbox
-              {...register('checkbox')}
-              type="checkbox"
-            />
+            <Checkbox {...register('checkbox')} type="checkbox" />
             <span className="label-text pl-4">Aceito Termos e condições</span>
           </label>
           {/* {errors.checkbox && <span>{errors.checkbox.message}</span>} */}
-    
+
           <Button className="btn-primary btn mt-6 w-full" type="submit">
             Cadastrar
           </Button>

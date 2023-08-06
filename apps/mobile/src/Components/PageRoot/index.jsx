@@ -1,16 +1,16 @@
-import { Outlet } from "react-router-dom"
+import { Outlet } from 'react-router-dom'
 import NavBar from '../NavBar'
 
-function PageRoot({children}) {
+function PageRoot({ children }) {
   return (
-    <main className="container p-0 h-screen flex flex-col"> 
-      <div className="flex flex-col flex-1">
-				<Outlet />
-				{children}
-			</div>
+    <main className="container flex h-screen flex-col p-0">
+      <div className="flex flex-1 flex-col">
+        <Outlet />
+        {children}
+      </div>
 
-      <div className="flex flex-2">
-       <NavBar />
+      <div className="flex-2 flex">
+        <NavBar />
       </div>
     </main>
   )

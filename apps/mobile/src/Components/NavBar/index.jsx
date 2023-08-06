@@ -1,25 +1,30 @@
-import { Link } from "react-router-dom"
-import { Tabs, TabsList } from "./TabsComponents"
+import { Tabs, TabsList } from './TabsComponents'
 
-import { AvatarIcon, CalendarIcon, FileTextIcon, HomeIcon } from "@radix-ui/react-icons"
+import {
+  AvatarIcon,
+  CalendarIcon,
+  FileTextIcon,
+  HomeIcon,
+} from '@radix-ui/react-icons'
 
 function NavBar() {
   return (
     <Tabs>
       <TabsList routes={'/user'}>
-          <HomeIcon />Menu
+        <HomeIcon />
+        Menu
       </TabsList>
       <TabsList routes={''}>
-          <FileTextIcon />Taks
+        <FileTextIcon />
+        Taks
       </TabsList>
       <TabsList routes={'calendar'}>
-          <CalendarIcon /> Calendar
+        <CalendarIcon /> Calendar
       </TabsList>
       <TabsList routes={''}>
         <AvatarIcon /> User
       </TabsList>
     </Tabs>
-
   )
 }
 
