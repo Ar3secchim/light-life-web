@@ -1,7 +1,7 @@
 {
   "name": "Project 77 Days ",
   "short_name": "77 Days",
-  "start_url": "/",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#ffffff",
   "description": "A readable Hacker News app.",
