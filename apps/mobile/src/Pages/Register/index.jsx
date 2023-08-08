@@ -1,6 +1,12 @@
-import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useForm } from 'react-hook-form'
+import { Link } from 'react-router-dom'
 import { z } from 'zod'
+
+import { Button } from '@/Components/ui/button'
+import { Checkbox } from '@/Components/ui/checkbox'
+import { Input } from '@/Components/ui/input'
+import { ChevronLeftIcon } from '@radix-ui/react-icons'
 
 import ElipseSuperior from '../../assets/SignIn/elipse-superior.png'
 
@@ -33,8 +39,14 @@ function Register() {
 
   return (
     <main className="container">
+      <Link to={'/signin'}>
+        <Button variant="ghost" className="absolute left-1 top-2 z-10">
+          <ChevronLeftIcon className="h-6 w-6" />
+        </Button>
+      </Link>
+
       <img
-        className="relative -left-6 -top-6 z-0"
+        className="relative -left-8 z-0"
         src={ElipseSuperior}
         alt="Elipses verdes no canto superior esquerdo"
       />
@@ -45,42 +57,37 @@ function Register() {
           onSubmit={handleSubmit(createUser)}
           className="mt-4 flex w-full flex-col gap-6"
         >
-          <input
-            className="input border-gray-700 focus:input-accent"
+          <Input
             {...register('name')}
             type="text"
             placeholder="Primeiro nome"
           />
-          {errors.name && <span>{errors.name.message}</span>}
+          {errors.name && (
+            <span className="-mt-4 text-xs">{errors.name.message}</span>
+          )}
 
-          <input
-            className="input border-gray-700 focus:input-accent"
-            {...register('email')}
-            type="email"
-            placeholder="Email"
-          />
-          {errors.email && <span>{errors.email.message}</span>}
+          <Input {...register('email')} type="email" placeholder="Email" />
+          {errors.email && (
+            <span className="-mt-4 text-xs">{errors.email.message}</span>
+          )}
 
-          <input
-            className="input border-gray-700 focus:input-accent"
+          <Input
             {...register('password')}
             type="password"
             placeholder="Senha"
           />
-          {errors.password && <span>{errors.password.message}</span>}
+          {errors.password && (
+            <span className="-mt-4 text-xs">{errors.password.message}</span>
+          )}
           <label className=" flex justify-center">
-            <input
-              {...register('checkbox')}
-              className="checkbox-accent checkbox  "
-              type="checkbox"
-            />
+            <Checkbox {...register('checkbox')} type="checkbox" />
             <span className="label-text pl-4">Aceito Termos e condições</span>
           </label>
-          {errors.checkbox && <span>{errors.checkbox.message}</span>}
+          {/* {errors.checkbox && <span>{errors.checkbox.message}</span>} */}
 
-          <button className="btn-primary btn mt-6 w-full" type="submit">
+          <Button className="btn-primary btn mt-6 w-full" type="submit">
             Cadastrar
-          </button>
+          </Button>
         </form>
       </section>
     </main>

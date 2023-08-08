@@ -3,6 +3,10 @@ import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import { z } from 'zod'
 
+import { Button } from '@/Components/ui/button'
+import { Input } from '@/Components/ui/input'
+import { ChevronLeftIcon } from '@radix-ui/react-icons'
+
 import ElipseSuperior from '../../assets/SignIn/elipse-superior.png'
 import IlustracaoSignIn from '../../assets/SignIn/ilustratorSingIn.png'
 
@@ -32,8 +36,14 @@ function SignIn() {
 
   return (
     <main className="container">
+      <Link to={'/'}>
+        <Button variant="ghost" className="absolute left-1 top-2 z-10">
+          <ChevronLeftIcon className="h-6 w-6" />
+        </Button>
+      </Link>
+
       <img
-        className="relative -left-6 -top-6 z-0"
+        className="relative -left-8 z-0"
         src={ElipseSuperior}
         alt="Elipses verdes no canto superior esquerdo"
       />
@@ -48,43 +58,39 @@ function SignIn() {
           onSubmit={handleSubmit(createUser)}
           className="mt-4 flex w-full flex-col gap-6"
         >
-          <input
-            className="input border-gray-700 focus:input-accent"
-            {...register('email')}
-            type="text"
-            placeholder="Email"
-          />
+          <Input {...register('email')} type="Email" placeholder="Email" />
+
           {errors.email && (
-            <span className="text-base text-accent">
-              {errors.email.message}
-            </span>
+            <span className="-mt-4 text-xs">{errors.email.message}</span>
           )}
 
-          <input
-            className="input border-gray-700 focus:input-accent"
+          <Input
             type="password"
             placeholder="password"
             {...register('password')}
           />
 
           {errors.password && (
-            <span className="text-base text-accent">
-              {errors.password.message}
-            </span>
+            <span className="-mt-4 text-xs">{errors.password.message}</span>
           )}
 
-          <Link className="mt-6 text-center text-base text-accent">
+          <Button variant="link" className="decoration-emerald-900">
             Esqueceu a senha?
-          </Link>
+          </Button>
 
-          <button className="btn-primary btn mt-6 w-full" type="submit">
-            Entrar
-          </button>
+          <Link to={'/user'} className="w-full">
+            <Button size="lg" type="submit" className="w-full">
+              Entrar
+            </Button>
+          </Link>
         </form>
 
         <p className="mt-6 text-sm">
           Não tem uma conta ?
-          <Link to={'/register'} className="pl-1 text-sm text-accent">
+          <Link
+            to={'/register'}
+            className="pl-1 text-sm underline decoration-emerald-900"
+          >
             Cadastra-se aqui
           </Link>
         </p>

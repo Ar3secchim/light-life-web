@@ -93,7 +93,7 @@ npm run start
 
 ## 🔮 Libs adicionais
 
-- DaisyUI -> matreial UI baseado no Tailwind com modo dark/ligth automático
+- shadcn/ui -> material UI baseado no Tailwind com modo dark/ligth automático
 - Prisma como ORM 
 - Deploy na Vercel
 - PlanetScale como o Banco de dados (mysql)

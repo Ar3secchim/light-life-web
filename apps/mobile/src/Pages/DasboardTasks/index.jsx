@@ -1,9 +1,7 @@
 import { useState } from 'react'
-import { AiOutlineSearch } from 'react-icons/ai'
-import NavBar from '../../Components/NavBar'
 import avatar from '../../assets/avatar.png'
 
-function Home() {
+function DasboardTasks() {
   const [check, setCheck] = useState(false)
 
   function Ischeck(event) {
@@ -11,8 +9,8 @@ function Home() {
   }
 
   return (
-    <>
-      <div className="flex gap-2 rounded-b-3xl bg-primary px-4 py-8	">
+    <main className="px-4 py-8">
+      <section className="flex gap-2 rounded-b-3xl 	">
         <div className="avatar">
           <div className="w-12 ">
             <img src={avatar} alt="exmplo de avatar" />
@@ -24,13 +22,11 @@ function Home() {
             <h3 className="text-base font-normal ">Helou Name</h3>
             <h2 className="text-lg font-bold ">Taks para o dia</h2>
           </div>
-          <spam>
-            <AiOutlineSearch size={28} />
-          </spam>
+          <spam>{/* <AiOutlineSearch size={28} /> */}</spam>
         </div>
-      </div>
+      </section>
 
-      <section className="container mt-8">
+      <section>
         <h3 className="text-lg">Today Tasks</h3>
         <div>
           <div className="form-control mt-4">
@@ -48,9 +44,8 @@ function Home() {
           </div>
         </div>
       </section>
-      <NavBar />
-    </>
+    </main>
   )
 }
 
-export default Home
+export default DasboardTasks
