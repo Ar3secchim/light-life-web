@@ -1,7 +1,7 @@
 {
   "name": "Project 77 Days ",
   "short_name": "77 Days",
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "description": "A readable Hacker News app.",
@@ -20,12 +20,6 @@
       "src": "LogoVector512.png",
       "type": "image/png",
       "sizes": "512x512"
-    }
-  ],
-  "related_applications": [
-    {
-      "platform": "play",
-      "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
     }
   ]
 }
