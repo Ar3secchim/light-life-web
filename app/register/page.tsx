@@ -1,9 +1,8 @@
 "use client";
-import Link from "next/link";
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import IlustrationElipse from "@/assets/SignIn/elipse-superior.svg";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -16,6 +15,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import Image from "next/image";
 
 const schemaCreateUserForm = z.object({
   name: z.string().min(2, {
@@ -42,14 +42,23 @@ function Register() {
   }
 
   return (
-    <main>
-      <section className="h-screen flex flex-col items-center justify-center">
-        <h1 className="mb-5 text-2xl ">Se cadastre aqui</h1>
+    <main className="w-full">
+      <div className="absolute -left-2">
+        <Image src={IlustrationElipse} alt="elipse" />
+      </div>
+
+      <section className="flex flex-col justify-center h-screen">
+        <h1 className="mb-5 text-3xl font-bold text-center ">
+          Welcome Onboard!
+        </h1>
+        <p className="text-base font-medium text-primary text-center pb-14  ">
+          Let’s help you meet up your task
+        </p>
 
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="w-2/3 space-y-6"
+            className="space-y-6 pb-8"
           >
             <FormField
               control={form.control}
@@ -86,7 +95,7 @@ function Register() {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input type="password" placeholder="password" {...field} />
+                    <Input type="password" placeholder="senha" {...field} />
                   </FormControl>
 
                   <FormMessage />
@@ -94,9 +103,22 @@ function Register() {
               )}
             />
 
-            <Button type="submit">Submit</Button>
+            <FormField
+              control={form.control}
+              name="password"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input type="password" placeholder="confirme sua senha" {...field} />
+                  </FormControl>
+
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
           </form>
         </Form>
+        <Button type="submit">Submit</Button>
       </section>
     </main>
   );
