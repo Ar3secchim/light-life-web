@@ -14,20 +14,16 @@ import {
 import { Input } from "@/components/ui/input";
 
 const schemaCreateUserForm = z.object({
-  name: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
   email: z.string().email("Formato de email inválido"),
   password: z.string().min(6, {
     message: "Username must be at least 6 characters.",
   }),
 });
 
-function Register() {
+function Login() {
   const form = useForm<z.infer<typeof schemaCreateUserForm>>({
     resolver: zodResolver(schemaCreateUserForm),
     defaultValues: {
-      name: "",
       email: "",
       password: "",
     },
@@ -39,25 +35,13 @@ function Register() {
 
   return (
     <section className="flex flex-col justify-center h-screen w-full">
-      <h1 className="mb-5 text-3xl font-bold text-center ">Welcome Onboard!</h1>
+      <h1 className="mb-5 text-3xl font-bold text-center ">Welcome!</h1>
       <p className="text-base font-medium text-primary text-center pb-14  ">
         Let’s help you meet up your task
       </p>
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 pb-8">
-          <FormField
-            control={form.control}
-            name="name"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input type="text" placeholder="nome" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
           <FormField
             control={form.control}
             name="email"
@@ -88,29 +72,11 @@ function Register() {
               </FormItem>
             )}
           />
-
-          <FormField
-            control={form.control}
-            name="password"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input
-                    type="password"
-                    placeholder="confirme sua senha"
-                    {...field}
-                  />
-                </FormControl>
-
-                <FormMessage />
-              </FormItem>
-            )}
-          />
         </form>
       </Form>
-      <Button type="submit">Submit</Button>
+      <Button type="submit">login</Button>
     </section>
   );
 }
 
-export default Register;
+export default Login;
