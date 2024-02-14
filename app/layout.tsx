@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
+import IlustrationElipse from "@/assets/SignIn/elipse-superior.svg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} container flex min-h-screen flex-col items-center justify-between`}
+        className={`${inter.className} container flex min-h-screen flex-col items-center justify-between `}
       >
+        <div className="absolute -left-2">
+          <Image src={IlustrationElipse} alt="elipse" />
+        </div>
+
         {children}
       </body>
     </html>
