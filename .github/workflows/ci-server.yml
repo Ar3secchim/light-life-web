@@ -5,11 +5,9 @@ on:
     paths:
       - "./"
     branches:
-      - Development
+      - develop
   pull_request:
     types: [opened, synchronize, reopened]
-    paths:
-      - "./"
     branches:
       - "**"
 
