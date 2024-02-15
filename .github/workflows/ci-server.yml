@@ -1,10 +1,8 @@
 name: CI - Server
 on:
   push:
-    paths:
-      - "./"
     branches:
-      - Development
+      - "**"
   pull_request:
     types: [opened, synchronize, reopened]
     branches:
