@@ -3,31 +3,38 @@ name: CI - Server
 on:
   push:
     paths:
-      - 'apps/server/**'
+      - "./"
     branches:
-      - main
+      - Development
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
-      - 'apps/server/**'
+      - "./"
     branches:
-      - '**'
+      - "**"
 
 jobs:
+  check-aplication:
+    runs-on: ubuntu-latest
+  
+    steps:
+      - uses: actions/checkout@v3
+      - uses: oven-sh/setup-bun@v1
+
+      -name: Go test
+        run: bun test
+
   lint:
     name: Lint
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: 'npm'
+      - uses: oven-sh/setup-bun@v1
 
       - name: Clean install dependencies
-        run: npm install
+        run: bun install
 
-      - name: Lint 
-        run: npm run lint
-        working-directory: ./apps/server
+      - name: Lint
+        run: bun run lint
+        working-directory: ./
