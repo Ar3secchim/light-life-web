@@ -1,0 +1,7 @@
+describe("should to request /api/v1/status return status", ()=>{
+  test("GET return status 200", async ()=>{
+    const response = await fetch("http://localhost:3000/api/v1/status")
+
+    expect(response.status).toBe(200);
+  })
+})
