@@ -4,6 +4,7 @@
 Um aplicativo que acompanha o rastreamento de tarefas (hábitos) realizadas durante 77 dias. Seu objetivo é fornecer aos usuários um painel de verificações de atividades e uma porcentagem de aproveitamento dos dias já executados, além de feedbacks sobre onde eles estão errando mais durante o desafio.
 
 Este aplicativo foi desenvolvido para resolver um problema pessoal durante o rastreamento de novos hábitos por um período específico, fornecendo acompanhamento gráfico e insights sobre a evolução e as áreas de melhoria durante o desafio de 77 dias. 
+
 ## 🚀 Requisitos
 ### 1. Requisitos funcionais principais pensados para entrega do mvp:
 
@@ -49,12 +50,12 @@ O back-end desse projeto é construído em Node.js, mais especificamente sua ver
 
 Além do Node.js, utilizamos o banco de dados PostgreSQL, e adivinha, para fazer as query nesse banco decide realizar na mão as query, sem utilizar um ORM (Object relational manage) para afim poder aprofundar meu conhecimento em bancos SQL.
 
-
 ```sh
-cd apps/server
-
 # Copiar o arquivo com os dados de conexão e demais variáveis ambiente
-mrkdir .env.example .env
+mrkdir .env 
+
+# Vai Start aplicação web e subir um banco de dados locais com as váriaveis de ambiente setadas
+npm run dev
 
 # Subir o servidor HTTP
 npm run start
@@ -67,14 +68,13 @@ npm run start
 
 **🏧 Server:**
 - [Express](https://github.com/expressjs/express)
-- [Prisma](https://github.com/prisma/prisma)
 - [PostgreSQL](https://github.com/postgres)
 
 ## 🔮 Libs adicionais
 - shadcn/ui -> material UI baseado no Tailwind com modo dark/ligth automático
-- Prisma como ORM
+- Sem ultilização de ORM para poder treinar meus conhecimentos em Query.
 - Deploy na Vercel
-- PlanetScale como o Banco de dados (mysql)
+- NEON como o Banco de dados (PostgreSQL)
 - StoryBook para documentação de componentes
 
 ## 💬 Feedback
