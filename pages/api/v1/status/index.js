@@ -1,8 +1,9 @@
 import database from "infra/database";
 
 async function status(request, responde) {
-  const updateAt = new Date().toISOString();
+  const databaseName = process.env.POSTGRES_DB;
 
+  const updateAt = new Date().toISOString();
   const databaseVersionResult = await database.query("SHOW server_version;");
   const databaseVersionValue =
     await databaseVersionResult.rows[0].server_version;
@@ -16,11 +17,8 @@ async function status(request, responde) {
   const databaseMaxConectionsValue =
     await databaseMaxConectionsResult.rows[0].max_connections;
 
-  const databaseName = process.env.POSTGRES_DB;
-  const queryString =
-    "SELECT count(*)::int FROM pg_stat_activity WHERE datname=$1;";
   const databaseOpenedConectionsResult = await database.query({
-    text: queryString,
+    text: "SELECT count(*)::int FROM pg_stat_activity WHERE datname=$1;",
     values: [databaseName],
   });
   const databaseOpenedConectionsValue =
