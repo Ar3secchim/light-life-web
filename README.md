@@ -71,9 +71,7 @@ cd project-77-days.git
 npm install
 ```
 
-### Back-end
-
-O back-end desse projeto é construído em Node.js, mais especificamente sua versão Iron (20 LTS). Tudo detalhado no arquivo `.nvmrc`
+O projeto é construído em Node.js, mais especificamente sua versão Iron (20 LTS). Tudo detalhado no arquivo `.nvmrc`
 
 > Você pode instalar o Node.js seguindo [esse guia](https://efficient-sloth-d85.notion.site/Instalando-o-Node-js-d40fdabe8f0a491eb33b85da93d90a2f).
 
@@ -99,7 +97,10 @@ npm run start
 
 **🏧 Server:**
 
-- [Express](https://github.com/expressjs/express)
+- [NodeJS](https://efficient-sloth-d85.notion.site/Instalando-o-Node-js-d40fdabe8f0a491eb33b85da93d90a2f)
+
+**🎲 Banco de dados:**
+
 - [PostgreSQL](https://github.com/postgres)
 
 ## 🔮 Libs adicionais
@@ -107,8 +108,7 @@ npm run start
 - shadcn/ui -> material UI baseado no Tailwind com modo dark/ligth automático
 - Sem ultilização de ORM para poder treinar meus conhecimentos em Query.
 - Deploy na Vercel
-- NEON como o Banco de dados (PostgreSQL)
-- StoryBook para documentação de componentes
+- NEON para o Banco de dados (PostgreSQL)
 
 ## 💬 Feedback
 
