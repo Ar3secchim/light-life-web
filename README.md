@@ -14,7 +14,7 @@ Este aplicativo foi desenvolvido para resolver um problema pessoal durante o ras
 - [ ] O aplicativo deve fornecer um dashboard com gráficos e estatísticas sobre o desempenho do usuário.
 - [ ] O aplicativo deve oferecer feedback ao usuário sobre áreas em que ele pode melhorar.
 - [ ] Autenticação google
-- [ ] Ser um Pwa (progressive web app development) -> [Learn Pwa](https://web.dev/learn/pwa/)
+- [x] Ser um Pwa (progressive web app development) -> [Learn Pwa](https://web.dev/learn/pwa/)
 
 ## 2. Requisitos não funcionais:
 
@@ -29,6 +29,7 @@ Este aplicativo foi desenvolvido para resolver um problema pessoal durante o ras
 - O servidor utiliza uma arquitetura RESTful, com uma API para lidar com as solicitações do cliente e armazenar os dados em um banco de dados MySQL.
 
 ## Estrutura do projeto
+
 ```
 ├── infra/
 │ ├── migrations/ # Migrações do banco de dados
@@ -56,7 +57,6 @@ Este aplicativo foi desenvolvido para resolver um problema pessoal durante o ras
 ├── package.json
 └── README.md
 ```
-
 
 ## 💻 Executando o projeto
 
