@@ -29,7 +29,7 @@ Este aplicativo foi desenvolvido para resolver um problema pessoal durante o ras
 - O servidor utiliza uma arquitetura RESTful, com uma API para lidar com as solicitações do cliente e armazenar os dados em um banco de dados MySQL.
 
 ## Estrutura do projeto
-
+```
 ├── infra/
 │ ├── migrations/ # Migrações do banco de dados
 │ ├── compose.yaml
@@ -55,6 +55,8 @@ Este aplicativo foi desenvolvido para resolver um problema pessoal durante o ras
 ├── jsconfig.json
 ├── package.json
 └── README.md
+```
+
 
 ## 💻 Executando o projeto
 
