@@ -4,7 +4,6 @@ function Document() {
   return (
     <Html>
       <Head>
-        <title>Projeto 77</title>
         <link rel="shortcut icon" href="/iconRounded.png" />
         <link rel="apple-touch-icon" href="/iconRounded.png" />
         <link rel="manifest" href="/manifest.json" />

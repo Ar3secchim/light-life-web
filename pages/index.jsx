@@ -1,5 +1,5 @@
 function Home() {
-  return <div>oi</div>;
+  return <div className="text-cyan-400 font-bold">oi</div>;
 }
 
 export default Home;
