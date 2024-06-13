@@ -1,8 +1,8 @@
-import Layout from "../layout"
+import LayoutRootIntro from "../components/layout/layoutRoot"
 
 function LayoutIntro({Image, Title, Text, children}) {
   return (
-    <Layout>
+    <LayoutRootIntro>
       <button>Pular</button>
       <div>{Image}</div>
       <h3>{Title}</h3>
@@ -14,7 +14,7 @@ function LayoutIntro({Image, Title, Text, children}) {
       <span>Points</span>
       <span>Arrows</span>
       </div>
-    </Layout>
+    </LayoutRootIntro>
   )
 }
 
