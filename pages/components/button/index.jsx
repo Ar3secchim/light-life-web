@@ -1,10 +1,11 @@
+import Image from "next/image"
 import { tv } from "tailwind-variants"
 
 const buttonVariants = tv({
-  base: "font-bold rounded-xl",
+  base: "font-bold rounded-xl flex gap-1 justify-center",
   variants: {
     color: {
-      primary: "bg-green-500",
+      primary: "bg-primary",
       secondary: "bg-zinc-200",
     },
     size: {
@@ -14,7 +15,9 @@ const buttonVariants = tv({
       xl: "px-6 py-4",
     },
     style:{
-      outline:"bg-transparent border"
+      outline:'bg-transparent border w-full',
+      filled:'text-white bg-primary w-full  hover:bg-primary-dark-800',
+      icon:'p-4'
     },
     disabled: {
       true: 'opacity-50 bg-gray-500 pointer-events-none'
@@ -23,7 +26,7 @@ const buttonVariants = tv({
   compoundVariants: [
     {
       style: 'outline',
-      class: 'text-gray-500 hover:bg-gray-100 border-green-300'
+      class: 'text-primary hover:bg-primary-dark-100 border-primary-dark-100'
     },
     {
       style:'borderless',

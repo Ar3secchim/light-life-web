@@ -1,5 +1,5 @@
 import Button from '../../components/button'
-import LayoutRootIntro from '../../components/layout/layoutRoot'
+import LayoutRootIntro from '../layout'
 
 function IntroTwo() {
   return (

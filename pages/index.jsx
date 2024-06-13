@@ -1,14 +1,24 @@
-import Layout from "./components/layout/layoutRoot";
+import Button from "./components/button";
+import LayoutRootIntro from "./intro/layout";
+import Link from "next/link";
 
 function Home() {
   return (
-    <Layout>
-      <h1>Você é o que você faz consistentemente</h1>
+    <LayoutRootIntro >
+      <h1 className="font-bold text-xl">Conquiste seus objetivos com <span className="text-primary">Ligth Life</span></h1>
 
-      <p>Isso é tanto para o lado bom quando para o lado ruim das coisas!</p>
-      <button>Começar uma nova jornada</button>
-      <button>Já tenho um conta</button>
-    </Layout>
+      <div className="text-center text-md font-bold text-secondary-dark-500">
+      <p>Você é o que você faz consistentemente.</p>
+      <p>Quando ciência, comportamento e tecnolofia se encontram, nasce a ferramente de gestão para te ajudar no processo de voar alto e leve!</p>
+      </div>
+      
+      <Button size="md" style="filled">
+        <Link href="/intro">
+        Começar uma nova jornada
+        </Link>
+      </Button>
+      <Button size="md" style="outline">Já tenho um conta</Button>
+    </LayoutRootIntro>
   );
 }
 

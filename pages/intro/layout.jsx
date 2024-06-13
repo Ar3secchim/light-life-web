@@ -1,21 +1,10 @@
-import LayoutRootIntro from "../components/layout/layoutRoot"
-
-function LayoutIntro({Image, Title, Text, children}) {
+function LayoutRootIntro({ children }) {
   return (
-    <LayoutRootIntro>
-      <button>Pular</button>
-      <div>{Image}</div>
-      <h3>{Title}</h3>
-      <p>{Text}</p>
-      <div>
+    <section className="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(119, 198, 181, 0.541),rgba(255,255,255,0))]">
+      <div className="h-screen flex flex-col justify-center items-center m-6 gap-7">
         {children}
       </div>
-      <div>
-      <span>Points</span>
-      <span>Arrows</span>
-      </div>
-    </LayoutRootIntro>
+    </section>
   )
 }
-
-export default LayoutIntro
+export default LayoutRootIntro;
