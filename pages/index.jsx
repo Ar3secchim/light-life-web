@@ -1,10 +1,9 @@
 import Button from './components/button';
-import LayoutRootIntro from './intro/layout';
 import Link from 'next/link';
 
 function Home() {
   return (
-    <LayoutRootIntro>
+    <section className='mx-6 flex h-screen flex-col items-center justify-center gap-7'>
       <h1 className='text-xl font-bold'>
         Conquiste seus objetivos com{' '}
         <span className='text-primary'>Ligth Life</span>
@@ -24,7 +23,7 @@ function Home() {
       <Button size='md' style='outline'>
         Já tenho um conta
       </Button>
-    </LayoutRootIntro>
+    </section>
   );
 }
 

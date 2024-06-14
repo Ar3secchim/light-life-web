@@ -7,10 +7,6 @@ import SwitchPoint from '../components/icons/switch-point';
 function Intro() {
   return (
     <LayoutRootIntro>
-      <Button size='md'>
-        <Link href='/'>Pular</Link>
-      </Button>
-
       <h1 className='text-xl font-bold'>Começando pelo o começo</h1>
 
       <div className='text-md text-center font-bold text-secondary-dark-500'>
@@ -25,10 +21,10 @@ function Intro() {
       </div>
 
       <div className='flex w-full justify-between'>
-        <SwitchPoint activePosition={1} />
-        <Button style='icon'>
-          <ArrowCircleRight className='h-6 w-6 fill-none stroke-primary' />
-        </Button>
+        <SwitchPoint width={40} />
+        <Link href='/intro/pageOne'>
+          <ArrowCircleRight width={32} className='fill-none stroke-primary' />
+        </Link>
       </div>
     </LayoutRootIntro>
   );

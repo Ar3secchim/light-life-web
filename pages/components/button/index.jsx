@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { tv } from 'tailwind-variants';
 
 const buttonVariants = tv({
-  base: 'font-bold rounded-xl flex gap-1 justify-center',
+  base: 'font-bold rounded-xl flex gap-1 justify-center w-auto',
   variants: {
     color: {
       primary: 'bg-primary',
@@ -15,8 +15,8 @@ const buttonVariants = tv({
       xl: 'px-6 py-4',
     },
     style: {
-      outline: 'bg-transparent border w-full',
-      filled: 'text-white bg-primary w-full  hover:bg-primary-dark-800',
+      outline: 'bg-transparent border w-auto',
+      filled: 'text-white bg-primary w-auto hover:bg-primary-dark-800',
       icon: 'p-4',
     },
     disabled: {
@@ -38,8 +38,8 @@ const buttonVariants = tv({
 function Button({ size, style, color, disabled, ...props }) {
   return (
     <button
-      className={buttonVariants({ size, style, color, disabled })}
       {...props}
+      className={buttonVariants({ size, style, color, disabled })}
     >
       {props.children}
     </button>
