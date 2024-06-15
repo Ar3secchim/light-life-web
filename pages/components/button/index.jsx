@@ -35,11 +35,11 @@ const buttonVariants = tv({
   ],
 });
 
-function Button({ size, style, color, disabled, ...props }) {
+function Button({ size, style, color, disabled, className, ...props }) {
   return (
     <button
       {...props}
-      className={buttonVariants({ size, style, color, disabled })}
+      className={buttonVariants({ size, style, color, disabled, className })}
     >
       {props.children}
     </button>

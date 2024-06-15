@@ -22,7 +22,7 @@ function IntroTwo() {
 
       <div className='flex w-full justify-between'>
         <SwitchPoint width={40} />
-        <Button size='md' style='filled' className='bg-secondary-dark-800'>
+        <Button size='md' style='filled'>
           <Link href='/'>Vou me comprometer</Link>
         </Button>
       </div>

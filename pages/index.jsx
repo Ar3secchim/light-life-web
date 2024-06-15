@@ -17,10 +17,10 @@ function Home() {
         </p>
       </div>
 
-      <Button size='md' style='filled'>
+      <Button size='md' style='filled' className='w-full'>
         <Link href='/intro'>Começar uma nova jornada</Link>
       </Button>
-      <Button size='md' style='outline'>
+      <Button size='md' style='outline' className='w-full'>
         Já tenho um conta
       </Button>
     </section>
