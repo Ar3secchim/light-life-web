@@ -1,10 +1,10 @@
-import database from "infra/database";
+import database from 'infra/database';
 
 async function status(request, responde) {
   const databaseName = process.env.POSTGRES_DB;
 
   const updateAt = new Date().toISOString();
-  const databaseVersionResult = await database.query("SHOW server_version;");
+  const databaseVersionResult = await database.query('SHOW server_version;');
   const databaseVersionValue =
     await databaseVersionResult.rows[0].server_version;
 
@@ -12,13 +12,13 @@ async function status(request, responde) {
   //const statusDatabase = await databaseStatusResult.rows[0].server_status;
 
   const databaseMaxConectionsResult = await database.query(
-    "SHOW max_connections;",
+    'SHOW max_connections;'
   );
   const databaseMaxConectionsValue =
     await databaseMaxConectionsResult.rows[0].max_connections;
 
   const databaseOpenedConectionsResult = await database.query({
-    text: "SELECT count(*)::int FROM pg_stat_activity WHERE datname=$1;",
+    text: 'SELECT count(*)::int FROM pg_stat_activity WHERE datname=$1;',
     values: [databaseName],
   });
   const databaseOpenedConectionsValue =
@@ -29,7 +29,7 @@ async function status(request, responde) {
     dependencies: {
       database: {
         version: databaseVersionValue,
-        status: "healthy",
+        status: 'healthy',
         max_connections: parseInt(databaseMaxConectionsValue),
         opened_connections: databaseOpenedConectionsValue,
       },
