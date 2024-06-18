@@ -7,10 +7,12 @@ import SwitchPoint from '../components/icons/switch-point';
 function Intro() {
   return (
     <LayoutRootIntro>
-      <h1 className='text-xl font-bold'>Começando pelo o começo</h1>
+      <h1 className='text-center text-2xl font-bold text-primary'>
+        Começando pelo o começo
+      </h1>
 
-      <div className='text-md text-center font-bold text-secondary-dark-500'>
-        <p>
+      <div className='text-md text-center font-semibold text-secondary-dark-500'>
+        <p className='pb-4'>
           Primeiro você tem que decidir aonde quer chegar. Com isso claro, damos
           o primeiro passo de uma longa maratona que se chama vida.
         </p>

@@ -6,10 +6,10 @@ import LayoutRootIntro from '../layout';
 function IntroOne() {
   return (
     <LayoutRootIntro>
-      <h1 className='text-xl font-bold'>Como chegar lá?</h1>
+      <h1 className='text-2xl font-bold text-primary'>Como chegar lá?</h1>
 
-      <div className='text-md text-center font-bold text-secondary-dark-500'>
-        <p>
+      <div className='text-md text-center font-semibold text-secondary-dark-500'>
+        <p className='pb-4'>
           Com consistência. Modulando seu ambiente. Fazendo oque precisar ser
           feito mesmo no dias ruins e que está sem motivação!
         </p>

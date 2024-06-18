@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { tv } from 'tailwind-variants';
 
 const buttonVariants = tv({
-  base: 'font-bold rounded-xl flex gap-1 justify-center w-auto',
+  base: 'font-bold rounded-xl flex gap-1 justify-center w-auto font-sans tracking-wide',
   variants: {
     color: {
       primary: 'bg-primary',
