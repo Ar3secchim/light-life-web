@@ -47,7 +47,10 @@ module.exports = {
         850: 'rgba(var( --bg-gray-850), <alpha-value>)',
       },
     },
-    fontFamily: {},
+    fontFamily: {
+      display:["var(--font-Sf-Roudend)"],
+      sans:["var(--font-Sf-Pro)"]
+    },
     extend: {},
   },
   plugins: [],
