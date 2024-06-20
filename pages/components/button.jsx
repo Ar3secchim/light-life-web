@@ -10,14 +10,15 @@ const buttonVariants = tv({
     },
     size: {
       default: 'h-10 px-2',
-      sm: 'px-2 py-1',
+      sm: 'px-2 py-1 font-normal',
       md: 'px-4 py-2',
       xl: 'px-6 py-4',
     },
     style: {
       outline: 'bg-transparent border w-auto',
       filled: 'text-white bg-primary w-auto hover:bg-primary-dark-800',
-      icon: 'p-4',
+      icon: 'p-4 items-center',
+      link: 'text-primary',
     },
     disabled: {
       true: 'opacity-50 bg-gray-500 pointer-events-none',
