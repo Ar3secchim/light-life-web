@@ -4,7 +4,6 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Form from '../components/form';
-import ArrowCircleRight from '../components/icons/arrows/arrow-circle-rigth';
 import GoogleLogo from '../components/icons/google-logo';
 import AppleLogo from '../components/icons/apple-logo';
 
@@ -19,12 +18,16 @@ function Login() {
 
       <Form onSubmit={onSubmit} />
 
-      <span className='m-4 flex items-center font-display'>
-        Já tem uma conta?
-        <Button size='sm' style='link' className='font-display'>
-          <span> Criar uma conta.</span>
+      <div className='my-4 flex items-center'>
+        <span className=''>Novo no Ligth Life?</span>
+        <Button
+          size='sm'
+          style='link'
+          className='font-display underline underline-offset-2'
+        >
+          <Link href='/register'> Criar sua conta</Link>
         </Button>
-      </span>
+      </div>
 
       <div className='flex gap-4'>
         <Button

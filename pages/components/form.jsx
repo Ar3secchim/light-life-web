@@ -1,5 +1,4 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import React from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import Button from './button';
@@ -41,7 +40,7 @@ function Form({ onSubmit, ...props }) {
           {...register('email')}
         />
         {
-          <span className='text-error font-sans text-sm'>
+          <span className='font-sans text-sm text-error'>
             {errors.email?.message}
           </span>
         }
@@ -55,7 +54,7 @@ function Form({ onSubmit, ...props }) {
           className={`h-10 rounded-lg border bg-white px-2 font-sans font-light placeholder-secondary-dark-200 ${errors.password ? 'border-error text-error focus:border-error focus:outline-error' : 'border-secondary-dark-100 focus:outline-primary'}`}
         />
         {
-          <span className='text-error font-sans text-sm'>
+          <span className='font-sans text-sm text-error'>
             {errors.password?.message}
           </span>
         }
