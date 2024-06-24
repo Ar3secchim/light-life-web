@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import Button from '../components/button';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
+import { FormProvider, useForm } from 'react-hook-form';
 import { z } from 'zod';
+import Input from '../components/form/input';
+import { Form } from '../components/form';
 
 function Register() {
   const schemaCreateUserForm = z
@@ -26,11 +28,7 @@ function Register() {
       path: ['confirmedPassword'],
     });
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
+  const createUserForm = useForm({
     resolver: zodResolver(schemaCreateUserForm),
     defaultValues: {
       name: '',
@@ -42,6 +40,11 @@ function Register() {
 
   const onSubmit = (data) => console.log(data);
 
+  const {
+    handleSubmit,
+    formState: { isSubmitted, errors },
+  } = createUserForm;
+
   return (
     <section className='m-4 mx-6 flex h-screen flex-col items-center justify-center'>
       <h1 className='text-center text-2xl font-extrabold'>
@@ -51,80 +54,72 @@ function Register() {
         Vamos ajudá-lo a seguir seus hábitos
       </h2>
 
-      <form
-        className='flex w-full flex-col items-center gap-3'
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <div className='flex w-full flex-col gap-2 font-normal'>
-          <label className='text-base font-medium text-secondary'>Nome</label>
-          <input
-            className={`h-10 rounded-lg border bg-white px-2 font-sans font-light placeholder-secondary-dark-200 ${errors.name ? 'border-error text-error focus:border-error focus:outline-error' : 'border-secondary-dark-100 focus:outline-primary'}`}
-            placeholder='Nome Sobrenome'
-            {...register('name')}
-          />
-          {
-            <span className='font-sans text-sm text-error'>
-              {errors.name?.message}
-            </span>
-          }
-        </div>
-        <div className='flex w-full flex-col gap-2 font-normal'>
-          <label className='text-base font-medium text-secondary'>Email</label>
-          <input
-            className={`h-10 rounded-lg border bg-white px-2 font-sans font-light placeholder-secondary-dark-200 ${errors.email ? 'border-error text-error focus:border-error focus:outline-error' : 'border-secondary-dark-100 focus:outline-primary'}`}
-            placeholder='email@email.com'
-            {...register('email')}
-          />
-          {
-            <span className='font-sans text-sm text-error'>
-              {errors.email?.message}
-            </span>
-          }
-        </div>
+      <FormProvider {...createUserForm}>
+        <form
+          className='flex w-full flex-col items-center gap-3'
+          onChange={handleSubmit(onSubmit)}
+        >
+          <Form.Field>
+            <Form.Label htmlFor='email'>Email</Form.Label>
+            <Form.Input
+              name='email'
+              type='email'
+              placeholder='email@gmail.com'
+              error={errors.email ? 'true' : ''}
+            />
+            <Form.ErrorMessage field='email' />
+          </Form.Field>
 
-        <div className='flex w-full flex-col gap-2 font-normal'>
-          <label className='text-base font-medium text-secondary'>Senha</label>
-          <input
-            type='password'
-            {...register('password')}
-            className={`h-10 rounded-lg border bg-white px-2 font-sans font-light placeholder-secondary-dark-200 ${errors.password ? 'border-error text-error focus:border-error focus:outline-error' : 'border-secondary-dark-100 focus:outline-primary'}`}
-          />
-          {
-            <span className='font-sans text-sm text-error'>
-              {errors.password?.message}
-            </span>
-          }
-          <label className='text-base font-medium text-secondary'>
-            Confirme sua senha
-          </label>
-          <input
-            type='password'
-            {...register('confirmedPassword')}
-            className={`h-10 rounded-lg border bg-white px-2 font-sans font-light placeholder-secondary-dark-200 ${errors.confirmedPassword ? 'border-error text-error focus:border-error focus:outline-error' : 'border-secondary-dark-100 focus:outline-primary'}`}
-          />
-          {
-            <span className='font-sans text-sm text-error'>
-              {errors.confirmedPassword?.message}
-            </span>
-          }
-        </div>
+          <Form.Field>
+            <Form.Label htmlFor='Name'>Nome</Form.Label>
+            <Form.Input
+              name='name'
+              type='name'
+              placeholder='Name Sobrenome'
+              error={errors.name ? 'true' : ''}
+            />
+            <Form.ErrorMessage field='email' />
+          </Form.Field>
 
-        <span className='w-full'>
-          <Button
-            size='sm'
-            style='link'
-            className='m-2 justify-start p-0 font-display'
-          >
-            <Link className='w-fit' href='/'>
-              Esqueceu a senha?
-            </Link>
+          <Form.Field>
+            <Form.Label htmlFor='password'>Senha</Form.Label>
+            <Form.Input
+              name='password'
+              type='password'
+              placeholder='••••••'
+              error={errors.password ? 'true' : ''}
+            />
+            <Form.ErrorMessage field='password' />
+          </Form.Field>
+
+          <Form.Field>
+            <Form.Label htmlFor='password'>Confirme sua senha</Form.Label>
+            <Form.Input
+              name='confirmedPassword'
+              type='password'
+              placeholder='••••••'
+              error={errors.confirmedPassword ? 'true' : ''}
+            />
+            <Form.ErrorMessage field='password' />
+          </Form.Field>
+
+          <span className='w-full'>
+            <Button
+              size='sm'
+              style='link'
+              className='m-2 justify-start p-0 font-display'
+            >
+              <Link className='w-fit' href='/'>
+                Esqueceu a senha?
+              </Link>
+            </Button>
+          </span>
+
+          <Button size='md' style='filled' className='mt-8 w-56' type='submit'>
+            Entrar
           </Button>
-        </span>
-
-        <Button size='md' style='filled' className='mt-8 w-56' type='submit'>
-          Entrar
-        </Button>
-      </form>
+        </form>
+      </FormProvider>
 
       <div className='my-4 flex w-full flex-col text-center'>
         <span className=''>Já tem um conta?</span>
