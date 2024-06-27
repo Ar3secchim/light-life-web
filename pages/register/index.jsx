@@ -3,7 +3,6 @@ import Button from '../components/button';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { FormProvider, useForm } from 'react-hook-form';
 import { z } from 'zod';
-import Input from '../components/form/input';
 import { Form } from '../components/form';
 
 function Register() {
@@ -37,7 +36,8 @@ function Register() {
 
   const {
     handleSubmit,
-    formState: { isSubmitted, errors },
+    formState: { errors },
+    register,
   } = createUserForm;
 
   return (
@@ -60,6 +60,7 @@ function Register() {
               name='email'
               placeholder='email@gmail.com'
               error={errors.email ? 'true' : ''}
+              {...register('email')}
             />
           </Form.Field>
 
@@ -70,6 +71,7 @@ function Register() {
               type='name'
               placeholder='Name Sobrenome'
               error={errors.name ? 'true' : ''}
+              {...register('name')}
             />
           </Form.Field>
 
@@ -80,6 +82,7 @@ function Register() {
               type='password'
               placeholder='••••••'
               error={errors.password ? 'true' : ''}
+              {...register('password')}
             />
           </Form.Field>
 
@@ -90,6 +93,7 @@ function Register() {
               type='password'
               placeholder='••••••'
               error={errors.confirmedPassword ? 'true' : ''}
+              {...register('confirmedPassword')}
             />
           </Form.Field>
 
