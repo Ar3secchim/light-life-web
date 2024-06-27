@@ -21,7 +21,7 @@ function Index() {
         <Link href='/intro'>Começar uma nova jornada</Link>
       </Button>
       <Button size='md' style='outline' className='w-full'>
-        Já tenho um conta
+        <Link href='/login'> Já tenho um conta</Link>
       </Button>
     </section>
   );
