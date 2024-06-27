@@ -27,7 +27,7 @@ function IntroTwo() {
       <div className='flex w-full justify-between'>
         <SwitchPoint width={40} />
         <Button size='md' style='filled'>
-          <Link href='/home'>Vou me comprometer</Link>
+          <Link href='/login'>Vou me comprometer</Link>
         </Button>
       </div>
     </LayoutRootIntro>
