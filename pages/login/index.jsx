@@ -1,11 +1,14 @@
+'use client';
 import Link from 'next/link';
 import Button from '../components/button';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import GoogleLogo from '../components/icons/google-logo';
 import AppleLogo from '../components/icons/apple-logo';
-import { Form } from '../components/form';
 import { FormProvider, useForm } from 'react-hook-form';
+import Label from '../components/label';
+import Field from '../components/field';
+import Input from '../components/input';
 
 function Login() {
   const schemaCreateUserForm = z.object({
@@ -25,6 +28,12 @@ function Login() {
 
   const onSubmit = (data) => console.log(data);
 
+  const {
+    handleSubmit,
+    formState: { errors },
+    register,
+  } = createUserForm;
+
   return (
     <section className='m-4 mx-6 flex h-screen flex-col items-center justify-center'>
       <h1 className='my-8 text-center text-2xl font-extrabold'>
@@ -34,26 +43,26 @@ function Login() {
       <FormProvider {...createUserForm}>
         <form
           className='flex w-full flex-col items-center gap-3'
-          onSubmit={createUserForm.handleSubmit(onSubmit)}
+          onSubmit={handleSubmit(onSubmit)}
         >
-          <Form.Field>
-            <Form.Label>Email</Form.Label>
-            <Form.Input
+          <Field>
+            <Label>Email</Label>
+            <Input
               name='email'
               placeholder='email@gmail.com'
-              error={createUserForm.formState.errors.email ? 'true' : ''}
+              error={errors.email ? 'true' : ''}
             />
-          </Form.Field>
+          </Field>
 
-          <Form.Field>
-            <Form.Label>Senha</Form.Label>
-            <Form.Input
+          <Field>
+            <Label>Senha</Label>
+            <Input
               name='password'
               type='password'
               placeholder='••••••'
-              error={createUserForm.formState.errors.password ? 'true' : ''}
+              error={errors.password ? 'true' : ''}
             />
-          </Form.Field>
+          </Field>
 
           <span className='w-full'>
             <Button
@@ -74,7 +83,7 @@ function Login() {
       </FormProvider>
 
       <div className='my-4 flex items-center'>
-        <span className=''>Novo no Ligth Life?</span>
+        <span>Novo no Ligth Life?</span>
         <Button
           size='sm'
           style='link'

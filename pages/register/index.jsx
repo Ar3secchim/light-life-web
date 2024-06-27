@@ -1,9 +1,12 @@
+'use client';
 import Link from 'next/link';
 import Button from '../components/button';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { FormProvider, useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { Form } from '../components/form';
+import Label from '../components/label';
+import Input from '../components/input';
+import Field from '../components/field';
 
 function Register() {
   const schemaCreateUserForm = z
@@ -37,7 +40,6 @@ function Register() {
   const {
     handleSubmit,
     formState: { errors },
-    register,
   } = createUserForm;
 
   return (
@@ -54,48 +56,44 @@ function Register() {
           className='flex w-full flex-col items-center gap-3'
           onSubmit={handleSubmit(onSubmit)}
         >
-          <Form.Field>
-            <Form.Label htmlFor='email'>Email</Form.Label>
-            <Form.Input
+          <Field>
+            <Label htmlFor='email'>Email</Label>
+            <Input
               name='email'
               placeholder='email@gmail.com'
               error={errors.email ? 'true' : ''}
-              {...register('email')}
             />
-          </Form.Field>
+          </Field>
 
-          <Form.Field>
-            <Form.Label htmlFor='Name'>Nome</Form.Label>
-            <Form.Input
+          <Field>
+            <Label htmlFor='Name'>Nome</Label>
+            <Input
               name='name'
               type='name'
               placeholder='Name Sobrenome'
               error={errors.name ? 'true' : ''}
-              {...register('name')}
             />
-          </Form.Field>
+          </Field>
 
-          <Form.Field>
-            <Form.Label htmlFor='password'>Senha</Form.Label>
-            <Form.Input
+          <Field>
+            <Label htmlFor='password'>Senha</Label>
+            <Input
               name='password'
               type='password'
               placeholder='••••••'
               error={errors.password ? 'true' : ''}
-              {...register('password')}
             />
-          </Form.Field>
+          </Field>
 
-          <Form.Field>
-            <Form.Label htmlFor='password'>Confirme sua senha</Form.Label>
-            <Form.Input
+          <Field>
+            <Label htmlFor='password'>Confirme sua senha</Label>
+            <Input
               name='confirmedPassword'
               type='password'
               placeholder='••••••'
               error={errors.confirmedPassword ? 'true' : ''}
-              {...register('confirmedPassword')}
             />
-          </Form.Field>
+          </Field>
 
           <span className='w-full'>
             <Button

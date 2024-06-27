@@ -18,10 +18,7 @@ const inputVariants = tv({
 });
 
 function Input({ size, error, name, className, ...props }) {
-  const {
-    register,
-    formState: { errors },
-  } = useFormContext();
+  const formContext = useFormContext();
 
   return (
     <>
@@ -29,10 +26,10 @@ function Input({ size, error, name, className, ...props }) {
         htmlFor={name}
         id={name}
         className={inputVariants({ size, error, className })}
-        {...register(name)}
+        {...formContext?.register(name)}
         {...props}
       />
-      <ErrorMessage field={name} error={errors} />
+      <ErrorMessage error={formContext?.formState.errors} field={name} />
     </>
   );
 }
