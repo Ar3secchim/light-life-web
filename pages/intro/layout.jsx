@@ -14,7 +14,7 @@ function LayoutRootIntro({ children }) {
             <ArrowLeft className='stroke-primary' />
           </Button>
 
-          <Button size='md' className='font-display px-0 text-primary'>
+          <Button size='md' className='px-0 font-display text-primary'>
             <Link href='/home'>Pular</Link>
           </Button>
         </div>
