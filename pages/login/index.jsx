@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import Button from '../components/button';
-import { FormProvider, useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import GoogleLogo from '../components/icons/google-logo';
 import AppleLogo from '../components/icons/apple-logo';
 import { Form } from '../components/form';
+import { FormProvider, useForm } from 'react-hook-form';
 
 function Login() {
   const schemaCreateUserForm = z.object({
@@ -20,16 +20,8 @@ function Login() {
 
   const createUserForm = useForm({
     resolver: zodResolver(schemaCreateUserForm),
-    defaultValues: {
-      email: '',
-      password: '',
-    },
+    mode: 'onSubmit',
   });
-
-  const {
-    handleSubmit,
-    formState: { isSubmitted, errors },
-  } = createUserForm;
 
   const onSubmit = (data) => console.log(data);
 
@@ -42,28 +34,25 @@ function Login() {
       <FormProvider {...createUserForm}>
         <form
           className='flex w-full flex-col items-center gap-3'
-          onChange={handleSubmit(onSubmit)}
+          onSubmit={createUserForm.handleSubmit(onSubmit)}
         >
           <Form.Field>
-            <Form.Label htmlFor='email'>Email</Form.Label>
+            <Form.Label>Email</Form.Label>
             <Form.Input
               name='email'
-              type='email'
               placeholder='email@gmail.com'
-              error={errors.email ? 'true' : ''}
+              error={createUserForm.formState.errors.email ? 'true' : ''}
             />
-            <Form.ErrorMessage field='email' />
           </Form.Field>
 
           <Form.Field>
-            <Form.Label htmlFor='password'>Senha</Form.Label>
+            <Form.Label>Senha</Form.Label>
             <Form.Input
               name='password'
               type='password'
               placeholder='••••••'
-              error={errors.password ? 'true' : ''}
+              error={createUserForm.formState.errors.password ? 'true' : ''}
             />
-            <Form.ErrorMessage field='password' />
           </Form.Field>
 
           <span className='w-full'>

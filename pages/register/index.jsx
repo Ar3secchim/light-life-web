@@ -30,12 +30,7 @@ function Register() {
 
   const createUserForm = useForm({
     resolver: zodResolver(schemaCreateUserForm),
-    defaultValues: {
-      name: '',
-      email: '',
-      password: '',
-      confirmedPassword: '',
-    },
+    mode: 'onSubmit',
   });
 
   const onSubmit = (data) => console.log(data);
@@ -57,17 +52,15 @@ function Register() {
       <FormProvider {...createUserForm}>
         <form
           className='flex w-full flex-col items-center gap-3'
-          onChange={handleSubmit(onSubmit)}
+          onSubmit={handleSubmit(onSubmit)}
         >
           <Form.Field>
             <Form.Label htmlFor='email'>Email</Form.Label>
             <Form.Input
               name='email'
-              type='email'
               placeholder='email@gmail.com'
               error={errors.email ? 'true' : ''}
             />
-            <Form.ErrorMessage field='email' />
           </Form.Field>
 
           <Form.Field>
@@ -78,7 +71,6 @@ function Register() {
               placeholder='Name Sobrenome'
               error={errors.name ? 'true' : ''}
             />
-            <Form.ErrorMessage field='email' />
           </Form.Field>
 
           <Form.Field>
@@ -89,7 +81,6 @@ function Register() {
               placeholder='••••••'
               error={errors.password ? 'true' : ''}
             />
-            <Form.ErrorMessage field='password' />
           </Form.Field>
 
           <Form.Field>
@@ -100,7 +91,6 @@ function Register() {
               placeholder='••••••'
               error={errors.confirmedPassword ? 'true' : ''}
             />
-            <Form.ErrorMessage field='password' />
           </Form.Field>
 
           <span className='w-full'>

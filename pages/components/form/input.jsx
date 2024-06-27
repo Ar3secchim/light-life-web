@@ -1,5 +1,6 @@
 import { useFormContext } from 'react-hook-form';
 import { tv } from 'tailwind-variants';
+import ErrorMessage from './errorMessage';
 
 const inputVariants = tv({
   base: 'h-10 rounded-lg border bg-white px-2 font-sans font-light placeholder-secondary-dark-200 border-secondary-dark-100 focus:outline-primary',
@@ -20,12 +21,15 @@ function Input({ size, error, name, className, ...props }) {
   const { register } = useFormContext();
 
   return (
-    <input
-      id={name}
-      className={inputVariants({ size, error, className })}
-      {...register(name)}
-      {...props}
-    />
+    <>
+      <input
+        id={name}
+        className={inputVariants({ size, error, className })}
+        {...register(name)}
+        {...props}
+      />
+      <ErrorMessage field={name} />
+    </>
   );
 }
 export default Input;
