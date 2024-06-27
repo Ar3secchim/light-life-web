@@ -1,4 +1,3 @@
-'use client';
 import Link from 'next/link';
 import Button from '../components/button';
 import { z } from 'zod';
@@ -10,17 +9,17 @@ import Label from '../components/label';
 import Field from '../components/field';
 import Input from '../components/input';
 
-function Login() {
-  const schemaCreateUserForm = z.object({
-    email: z
-      .string()
-      .min(1, { message: 'email obrigátorio' })
-      .email('Formato de email inválido'),
-    password: z.string().trim().min(6, {
-      message: 'A senha deve ter pelo menos 6 caractéres.',
-    }),
-  });
+const schemaCreateUserForm = z.object({
+  email: z
+    .string()
+    .min(1, { message: 'email obrigátorio' })
+    .email('Formato de email inválido'),
+  password: z.string().trim().min(6, {
+    message: 'A senha deve ter pelo menos 6 caractéres.',
+  }),
+});
 
+function Login() {
   const createUserForm = useForm({
     resolver: zodResolver(schemaCreateUserForm),
     mode: 'onSubmit',
@@ -31,7 +30,6 @@ function Login() {
   const {
     handleSubmit,
     formState: { errors },
-    register,
   } = createUserForm;
 
   return (
