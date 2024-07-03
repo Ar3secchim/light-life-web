@@ -8,8 +8,8 @@ dotenv.config({
 });
 
 const jestConfig = createJestConfig({
+  testEnvironment: 'jsdom',
   moduleDirectories: ['node_modules', '<rootDir>'],
 });
 
 module.exports = jestConfig;
- 
