@@ -91,13 +91,3 @@ describe('should render the button correct props style', () => {
     expect(butoonElement).toHaveClass('text-primary');
   });
 });
-
-describe('should renders the button correct events', () => {
-  test('should render the button event hover background', () => {
-    render(
-      <Button style='filled' color='primary'>
-        Test Button
-      </Button>
-    );
-  });
-});
