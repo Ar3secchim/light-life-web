@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Button from '../../components/button';
 import LayoutRootIntro from './layout';
 import ArrowCircleRight from '../../components/icons/arrows/arrow-circle-rigth';
 import SwitchPoint from '../../components/icons/switch-point';
@@ -24,7 +23,7 @@ function Intro() {
 
       <div className='flex w-full justify-between'>
         <SwitchPoint width={40} />
-        <Link href='/intro/pageOne'>
+        <Link href='/pageOne'>
           <ArrowCircleRight width={32} className='fill-none stroke-primary' />
         </Link>
       </div>
