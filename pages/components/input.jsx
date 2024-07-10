@@ -1,6 +1,7 @@
 import { useFormContext } from 'react-hook-form';
 import { tv } from 'tailwind-variants';
 import ErrorMessage from './errorMessage';
+import Label from './label';
 
 const inputVariants = tv({
   base: 'h-10 rounded-lg border bg-white px-2 font-sans font-light placeholder-secondary-dark-200 border-secondary-dark-100 focus:outline-primary',
@@ -17,11 +18,12 @@ const inputVariants = tv({
   },
 });
 
-function Input({ size, error, name, className, ...props }) {
+function Input({ size, error, label, name, className, ...props }) {
   const formContext = useFormContext();
 
   return (
     <>
+      <Label htmlFor={name}>{label}</Label>
       <input
         htmlFor={name}
         id={name}

@@ -44,8 +44,8 @@ function Login() {
           onSubmit={handleSubmit(onSubmit)}
         >
           <Field>
-            <Label>Email</Label>
             <Input
+              label='Email'
               name='email'
               placeholder='email@gmail.com'
               error={errors.email ? 'true' : ''}
@@ -53,8 +53,8 @@ function Login() {
           </Field>
 
           <Field>
-            <Label>Senha</Label>
             <Input
+              label='Senha'
               name='password'
               type='password'
               placeholder='••••••'
