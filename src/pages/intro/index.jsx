@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import Button from '../components/button';
+import Button from '../../components/button';
 import LayoutRootIntro from './layout';
-import ArrowCircleRight from '../components/icons/arrows/arrow-circle-rigth';
-import SwitchPoint from '../components/icons/switch-point';
+import ArrowCircleRight from '../../components/icons/arrows/arrow-circle-rigth';
+import SwitchPoint from '../../components/icons/switch-point';
 
 function Intro() {
   return (

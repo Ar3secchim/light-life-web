@@ -1,12 +1,12 @@
 'use client';
 import Link from 'next/link';
-import Button from '../components/button';
+import Button from '../../components/button';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { FormProvider, useForm } from 'react-hook-form';
 import { z } from 'zod';
-import Label from '../components/label';
-import Input from '../components/input';
-import Field from '../components/field';
+import Label from '../../components/label';
+import Input from '../../components/input';
+import Field from '../../components/field';
 
 function Register() {
   const schemaCreateUserForm = z

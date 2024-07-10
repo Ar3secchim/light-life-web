@@ -1,13 +1,13 @@
 import Link from 'next/link';
-import Button from '../components/button';
+import Button from '../../components/button';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import GoogleLogo from '../components/icons/google-logo';
-import AppleLogo from '../components/icons/apple-logo';
+import GoogleLogo from '../../components/icons/google-logo';
+import AppleLogo from '../../components/icons/apple-logo';
 import { FormProvider, useForm } from 'react-hook-form';
-import Label from '../components/label';
-import Field from '../components/field';
-import Input from '../components/input';
+import Label from '../../components/label';
+import Field from '../../components/field';
+import Input from '../../components/input';
 
 const schemaCreateUserForm = z.object({
   email: z

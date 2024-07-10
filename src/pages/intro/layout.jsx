@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import Button from '../components/button';
+import Button from '../../components/button';
 import { useRouter } from 'next/router';
-import ArrowLeft from '../components/icons/arrows/arrow-left';
+import ArrowLeft from '../../components/icons/arrows/arrow-left';
 
 function LayoutRootIntro({ children }) {
   const router = useRouter();

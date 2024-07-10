@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { tv } from 'tailwind-variants';
 
 const buttonVariants = tv({
