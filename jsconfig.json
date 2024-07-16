@@ -1,5 +1,8 @@
 {
   "compilercConfig": {
-    "baseUrl": "./src"
+    "baseUrl": "src",
+    "paths": {
+      "@/component/*": "components/*"
+    }
   }
 }

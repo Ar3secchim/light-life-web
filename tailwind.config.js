@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        error:"#FA3434", 
+        error: '#FA3434',
         white: '#ffffff',
         primary: '#34786A',
         secondary: '#7A7B85',
@@ -49,13 +49,14 @@ module.exports = {
         },
       },
       fontFamily: {
-        display:["var(--font-Sf-Roudend)"],
-        sans:["var(--font-Sf-Pro)"]
+        display: ['var(--font-Sf-Roudend)'],
+        sans: ['var(--font-Sf-Pro)'],
       },
       boxShadow: {
-        'lg-invert': '0 -12px 15px -5px rgb(0 0 0 / 0.1), 0 -5px 6px -5px rgb(0 0 0 / 0.1);',
-        'lg': '0 12px 15px -5px rgb(0 0 0 / 0.1), 0 5px 6px -5px rgb(0 0 0 / 0.1);',
-      }
+        'lg-invert':
+          '0 -12px 15px -5px rgb(0 0 0 / 0.1), 0 -5px 6px -5px rgb(0 0 0 / 0.1);',
+        lg: '0 12px 15px -5px rgb(0 0 0 / 0.1), 0 5px 6px -5px rgb(0 0 0 / 0.1);',
+      },
     },
   },
   plugins: [],

@@ -1,15 +1,11 @@
-import LayoutRoot from "../layout";
+import LayoutRoot from '../layout';
 
 function DashboardTask() {
-  return ( 
+  return (
     <LayoutRoot>
-    <div>
-      Tasks
-    </div>
+      <div>Tasks</div>
     </LayoutRoot>
- 
-  )
+  );
 }
 
 export default DashboardTask;
-  

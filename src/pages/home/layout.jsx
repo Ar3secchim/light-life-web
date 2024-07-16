@@ -1,17 +1,15 @@
-import Navigation from "../../components/navigation";
+import Navigation from '../../components/navigation';
 
-function LayoutRoot({children}) {
-  return ( 
-    <section className="h-screen flex justify-between flex-col">
-   <div className="shadow-lg  h-24 w-full bg-bg-green-850 rounded-b-[20px] p-6 sticky "> 
-      NavBar
-    </div>
-      <div className="h-full">
-        {children}
+function LayoutRoot({ children }) {
+  return (
+    <section className='flex h-screen flex-col justify-between'>
+      <div className='sticky h-24 w-full rounded-b-[20px] bg-bg-green-850 p-6 shadow-lg'>
+        NavBar
       </div>
+      <div className='h-full'>{children}</div>
       <Navigation />
     </section>
-    )
+  );
 }
 
 export default LayoutRoot;

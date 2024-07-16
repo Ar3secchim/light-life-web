@@ -1,9 +1,9 @@
 function Navigation() {
   return (
-    <div className="shadow-lg-invert h-20 w-full bg-bg-green-850 rounded-t-[20px]  p-6 sticky "> 
+    <div className='sticky h-20 w-full rounded-t-[20px] bg-bg-green-850 p-6 shadow-lg-invert'>
       NavBar
     </div>
-  )
+  );
 }
 
-export default Navigation
+export default Navigation;
