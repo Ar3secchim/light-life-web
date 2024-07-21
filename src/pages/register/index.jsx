@@ -1,12 +1,12 @@
 'use client';
-import Link from 'next/link';
-import Button from '../../components/button';
 import { zodResolver } from '@hookform/resolvers/zod';
+import Link from 'next/link';
 import { FormProvider, useForm } from 'react-hook-form';
 import { z } from 'zod';
-import Label from '../../components/label';
-import Input from '../../components/input';
+import { Button } from '../../components/button';
 import Field from '../../components/field';
+import Input from '../../components/input';
+import Label from '../../components/label';
 
 function Register() {
   const schemaCreateUserForm = z
@@ -70,7 +70,7 @@ function Register() {
             <Input
               name='name'
               type='name'
-              placeholder='Name Sobrenome'
+              placeholder='Nome Sobrenome'
               error={errors.name ? 'true' : ''}
             />
           </Field>
@@ -96,31 +96,24 @@ function Register() {
           </Field>
 
           <span className='w-full'>
-            <Button
-              size='sm'
-              style='link'
-              className='m-2 justify-start p-0 font-display'
-            >
+            <Button asChild variant='link' className='p-2'>
               <Link className='w-fit' href='/'>
                 Esqueceu a senha?
               </Link>
             </Button>
           </span>
 
-          <Button size='md' style='filled' className='mt-8 w-56' type='submit'>
+          <Button type='submit' className='mt-8 w-56'>
             Entrar
           </Button>
         </form>
       </FormProvider>
 
-      <div className='my-4 flex w-full flex-col text-center'>
-        <span className=''>Já tem um conta?</span>
-        <Button
-          size='sm'
-          style='link'
-          className='font-display underline underline-offset-2'
-        >
-          <Link href='/login'>Faça seu login</Link>
+      <div className='my-4 flex w-full items-center justify-center text-center'>
+        <span>Já tem um conta?</span>
+
+        <Button asChild variant='link' className='p-2'>
+          <Link href='/login'>Faça seu login.</Link>
         </Button>
       </div>
     </section>

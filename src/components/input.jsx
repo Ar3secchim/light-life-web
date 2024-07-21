@@ -13,7 +13,7 @@ const inputVariants = tv({
       xl: 'px-6 py-4',
     },
     error: {
-      true: 'border-error text-error focus:border-error focus:outline-error',
+      true: 'border-destructive text-destructive focus:border-destructive focus:outline-destructive',
     },
   },
 });

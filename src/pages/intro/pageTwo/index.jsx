@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import Button from '../../../components/button';
-import ArrowCircleRight from '../../../components/icons/arrows/arrow-circle-rigth';
-import LayoutRootIntro from '../layout';
+
+import { Button } from '../../../components/button';
 import SwitchPoint from '../../../components/icons/switch-point';
+import LayoutRootIntro from '../layout';
 
 function IntroTwo() {
   return (
@@ -11,7 +11,7 @@ function IntroTwo() {
         Ambiente é a sua chave!
       </h1>
 
-      <div className='text-md text-center font-semibold text-secondary-dark-500'>
+      <div className='text-md text-secondary-dark-500 text-center font-semibold'>
         <p className='pb-4'>
           Desenvolva um ambiente que module seu comportamento! Se quer realizar
           exercícios deixa a roupa pronta no dia anterior, que ter alimentação
@@ -26,7 +26,7 @@ function IntroTwo() {
 
       <div className='flex w-full justify-between'>
         <SwitchPoint width={40} />
-        <Button size='md' style='filled'>
+        <Button asChild size='md' className='px-4'>
           <Link href='/login'>Vou me comprometer</Link>
         </Button>
       </div>

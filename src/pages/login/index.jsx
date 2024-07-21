@@ -1,12 +1,11 @@
-import Link from 'next/link';
-import Button from '../../components/button';
-import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import GoogleLogo from '../../components/icons/google-logo';
-import AppleLogo from '../../components/icons/apple-logo';
+import Link from 'next/link';
 import { FormProvider, useForm } from 'react-hook-form';
-import Label from '../../components/label';
+import { z } from 'zod';
+import { Button } from '../../components/button';
 import Field from '../../components/field';
+import AppleLogo from '../../components/icons/apple-logo';
+import GoogleLogo from '../../components/icons/google-logo';
 import Input from '../../components/input';
 
 const schemaCreateUserForm = z.object({
@@ -63,45 +62,37 @@ function Login() {
           </Field>
 
           <span className='w-full'>
-            <Button
-              size='sm'
-              style='link'
-              className='m-2 justify-start p-0 font-display'
-            >
+            <Button asChild variant='link' className='p-2'>
               <Link className='w-fit' href='/'>
                 Esqueceu a senha?
               </Link>
             </Button>
           </span>
 
-          <Button size='md' style='filled' className='mt-8 w-56' type='submit'>
+          <Button type='submit' className='mt-8 w-56'>
             Entrar
           </Button>
         </form>
       </FormProvider>
 
-      <div className='my-4 flex items-center'>
+      <div className='font-display my-4 flex items-center'>
         <span>Novo no Ligth Life?</span>
-        <Button
-          size='sm'
-          style='link'
-          className='font-display underline underline-offset-2'
-        >
+        <Button asChild variant='link' className='p-2'>
           <Link href='/register'> Criar sua conta</Link>
         </Button>
       </div>
 
       <div className='flex gap-4'>
         <Button
-          style='icon'
-          className='rounded-2xl border border-secondary-dark-100 hover:bg-secondary-dark-100'
+          variant='icon'
+          className='rounded-xl border border-secondary hover:bg-secondary'
         >
           <GoogleLogo />
         </Button>
 
         <Button
-          style='icon'
-          className='rounded-2xl border border-secondary-dark-100 p-3 hover:bg-secondary-dark-100'
+          variant='icon'
+          className='rounded-xl border border-secondary hover:bg-secondary'
         >
           <AppleLogo />
         </Button>

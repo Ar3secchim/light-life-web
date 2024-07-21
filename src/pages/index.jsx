@@ -1,5 +1,5 @@
-import Button from '../components/button';
 import Link from 'next/link';
+import { Button } from '../components/button';
 
 function Index() {
   return (
@@ -9,7 +9,7 @@ function Index() {
         <span className='text-primary'>Ligth Life</span>
       </h1>
 
-      <div className='text-md text-center font-semibold text-secondary-dark-500'>
+      <div className='text-md text-secondary-dark-500 text-center font-semibold'>
         <p>Você é o que você faz consistentemente.</p>
         <p>
           Quando ciência, comportamento e tecnolofia se encontram, nasce a
@@ -17,10 +17,15 @@ function Index() {
         </p>
       </div>
 
-      <Button size='md' style='filled' className='w-full'>
+      <Button asChild size='lg' className='w-full'>
         <Link href='/intro'>Começar uma nova jornada</Link>
       </Button>
-      <Button size='md' style='outline' className='w-full'>
+
+      <Button
+        asChild
+        variant='outline'
+        className='w-full border-primary text-primary'
+      >
         <Link href='/login'> Já tenho um conta</Link>
       </Button>
     </section>

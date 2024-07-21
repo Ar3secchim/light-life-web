@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import LayoutRootIntro from './layout';
 import ArrowCircleRight from '../../components/icons/arrows/arrow-circle-rigth';
 import SwitchPoint from '../../components/icons/switch-point';
+import LayoutRootIntro from './layout';
 
 function Intro() {
   return (
@@ -10,7 +10,7 @@ function Intro() {
         Começando pelo o começo
       </h1>
 
-      <div className='text-md text-center font-semibold text-secondary-dark-500'>
+      <div className='text-md text-secondary-dark-500 text-center font-semibold'>
         <p className='pb-4'>
           Primeiro você tem que decidir aonde quer chegar. Com isso claro, damos
           o primeiro passo de uma longa maratona que se chama vida.
@@ -23,7 +23,7 @@ function Intro() {
 
       <div className='flex w-full justify-between'>
         <SwitchPoint width={40} />
-        <Link href='/pageOne'>
+        <Link href='/intro/pageOne'>
           <ArrowCircleRight width={32} className='fill-none stroke-primary' />
         </Link>
       </div>

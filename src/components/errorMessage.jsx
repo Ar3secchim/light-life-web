@@ -1,5 +1,3 @@
-import { useFormContext } from 'react-hook-form';
-
 function ErrorMessage({ field, error }) {
   function get(obj, path) {
     const travel = (regexp) =>
@@ -18,7 +16,9 @@ function ErrorMessage({ field, error }) {
   const fieldString = field || '';
   const fielError = get(error, fieldString);
   return (
-    <span className='font-sans text-sm text-error'>{fielError?.message}</span>
+    <span className='font-sans text-sm text-destructive'>
+      {fielError?.message}
+    </span>
   );
 }
 
