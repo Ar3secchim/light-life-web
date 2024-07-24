@@ -9,19 +9,22 @@
   "scripts": {
     "dev": "node --watch src/index.js",
     "test": "jest --runInBand",
-    "fix": "",
-    "prepare": "husky"
+    "fix": "echo 123",
+    "prepare": "husky install"
   },
   "author": "Renara Secchim",
   "license": "MIT",
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "eslint --fix --max-warnings=0"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
   "commintlint": {
     "extends": [
       "@commintlint/config-conventional"
-    ]
-  },
-  "lint-staged": {
-    "./src/**/*.{js,md,json}": [
-      "npm run fix"
     ]
   },
   "dependencies": {
@@ -30,7 +33,11 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "eslint": "^9.7.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "husky": "^9.1.1",
-    "lint-staged": "^15.2.7"
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.3"
   }
 }
