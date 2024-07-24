@@ -10,7 +10,8 @@
     "dev": "node --watch src/index.js",
     "test": "jest --runInBand",
     "fix": "",
-    "prepare": "husky"
+    "prepare": "husky",
+    "commitlint": "commitlint --edit"
   },
   "author": "Renara Secchim",
   "license": "MIT",
