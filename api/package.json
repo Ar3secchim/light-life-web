@@ -9,9 +9,7 @@
   "scripts": {
     "dev": "node --watch src/index.js",
     "test": "jest --runInBand",
-    "fix": "",
-    "prepare": "husky",
-    "commitlint": "commitlint --edit"
+    "prepare": "husky api/.husky"
   },
   "author": "Renara Secchim",
   "license": "MIT",
