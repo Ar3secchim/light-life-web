@@ -10,7 +10,8 @@
     "dev": "node --watch src/index.js",
     "test": "jest --runInBand",
     "fix": "",
-    "prepare": "husky"
+    "prepare": "husky install",
+    "commitlint": "commitlint --edit"
   },
   "author": "Renara Secchim",
   "license": "MIT",
@@ -20,9 +21,12 @@
     ]
   },
   "lint-staged": {
-    "./src/**/*.{js,md,json}": [
-      "npm run fix"
-    ]
+    "**/*.{js,jsx,ts,tsx}": [
+
+      "eslint --max-warnings=0",
+      "prettier --write"
+    ],
+    "**/*.{html,json,css,scss,md,mdx}": ["prettier -w"]
   },
   "dependencies": {
     "express": "^4.19.2"
