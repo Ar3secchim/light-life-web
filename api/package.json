@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "node --watch src/index.js",
     "test": "jest --runInBand",
-    "prepare": "husky api/.husky"
+    "prepare": "npx husky ../api/.husky"
   },
   "author": "Renara Secchim",
   "license": "MIT",
