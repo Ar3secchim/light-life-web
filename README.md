@@ -6,7 +6,7 @@ Este aplicativo foi desenvolvido para resolver um problema pessoal durante o ras
 
 ## 🚀 Requisitos
 
-## 1. Requisitos funcionais principais pensados para entrega do mvp:
+## 1. Requisitos funcionais principais pensados para entrega do mvp
 
 - [ ] Os usuários devem poder criar uma lista de tarefas/hábitos para rastrear durante os 77 dias.
 - [ ] Os usuários devem poder marcar as tarefas concluídas diariamente.
@@ -16,7 +16,7 @@ Este aplicativo foi desenvolvido para resolver um problema pessoal durante o ras
 - [ ] Autenticação google
 - [x] Ser um Pwa (progressive web app development) -> [Learn Pwa](https://web.dev/learn/pwa/)
 
-## 2. Requisitos não funcionais:
+## 2. Requisitos não funcionais
 
 - [ ] A interface do usuário deve ser intuitiva e fácil de usar.
 - [ ] O aplicativo deve ser responsivo e funcionar em maiorias dos dispositivos móveis.
@@ -116,6 +116,6 @@ npm run start
 
 Este projeto faz parte do meu portfólio, ficarei feliz em receber feedback sobre o projeto, sobre os códigos, estrutura ou qualquer coisa que me ajude a evoluir para me tornar uma desenvolvedora melhor. Abre uma PR ai ou um issues.
 
-Email: renarasecchim@gmail.com
+Email: <renarasecchim@gmail.com>
 
 Conecte-se comigo [Linkedin](https://www.linkedin.com/in/renarasecchim/)
