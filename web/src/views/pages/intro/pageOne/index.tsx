@@ -1,9 +1,10 @@
-import Link from 'next/link';
-import ArrowCircleRight from '../../../components/icons/arrows/arrow-circle-rigth';
-import SwitchPoint from '../../../components/icons/switch-point';
-import LayoutRootIntro from '../layout';
+import { ArrowCircleRight } from "@views/components/arrow-circle-rigth";
+import SwitchPoint from "@views/components/switch-point";
+import { LayoutRootIntro } from "@views/pages/Layout/layoutIntro";
 
-function IntroOne() {
+import { Link } from "react-router-dom";
+
+export function IntroOne() {
   return (
     <LayoutRootIntro>
       <h1 className="text-2xl font-bold text-primary">Como chegar lá?</h1>
@@ -29,4 +30,3 @@ function IntroOne() {
   );
 }
 
-export default IntroOne;

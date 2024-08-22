@@ -1,11 +1,9 @@
-import LayoutRoot from "../layout";
+import { LayoutRoot } from "@views/pages/Layout/layoutRoot";
 
-function DashboardTask() {
+export function DashboardTask() {
   return (
     <LayoutRoot className="absolute top-0">
       <div>Tasks</div>
     </LayoutRoot>
   );
 }
-
-export default DashboardTask;

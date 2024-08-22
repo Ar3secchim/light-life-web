@@ -1,10 +1,9 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { ArrowLeft } from '@views/components/arrow-left';
 
 import { Button } from 'react-day-picker';
-import ArrowLeft from '../../components/icons/arrows/arrow-left';
+import { Link } from 'react-router-dom';
 
-function LayoutRootIntro({ children }) {
+export function LayoutRootIntro({ children }) {
   const router = useRouter();
 
   return (
@@ -27,4 +26,3 @@ function LayoutRootIntro({ children }) {
     </section>
   );
 }
-export default LayoutRootIntro;

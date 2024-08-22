@@ -1,24 +1,12 @@
 import { TabsContent } from '@radix-ui/react-tabs';
-import {
-  BotIcon,
-  CalendarDays,
-  ChevronDown,
-  ChevronLeft,
-  ChevronRight,
-  HomeIcon,
-  ListCheck,
-  UserRound,
-} from 'lucide';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { Avatar, AvatarFallback, AvatarImage } from '../../components/avatar';
-import {
-  Navigation,
-  NavigationList,
-  NavigationTrigger,
-} from '../../components/navigation';
+import { Avatar, AvatarFallback, AvatarImage } from '@views/components/ui/avatar';
+import { NavigationList, NavigationTrigger } from '@views/components/ui/navigation';
 
-function LayoutRoot({ children }) {
+import { BotIcon, CalendarDays, ChevronDown, ChevronLeft, ChevronRight, HomeIcon, Navigation, UserRound } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+
+export function LayoutRoot({ children }) {
   const router = useRouter();
 
   return (
@@ -86,5 +74,3 @@ function LayoutRoot({ children }) {
     </section>
   );
 }
-
-export default LayoutRoot;

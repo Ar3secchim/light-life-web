@@ -1,9 +1,10 @@
-import Link from 'next/link';
-import ArrowCircleRight from '../../components/icons/arrows/arrow-circle-rigth';
-import SwitchPoint from '../../components/icons/switch-point';
-import LayoutRootIntro from './layout';
+import { routes } from "@app/Router/routes";
+import { ArrowCircleRight } from "@views/components/arrow-circle-rigth";
+import { SwitchPoint } from "@views/components/switch-point";
+import { Link } from "react-router-dom";
+import { LayoutRootIntro } from "../Layout/layoutIntro";
 
-function Intro() {
+export function Intro() {
   return (
     <LayoutRootIntro>
       <h1 className="text-center text-2xl font-bold text-primary">
@@ -23,12 +24,10 @@ function Intro() {
 
       <div className="flex w-full justify-between">
         <SwitchPoint width={40} />
-        <Link href="/intro/pageOne">
+        <Link to={routes.introTwo}>
           <ArrowCircleRight width={32} className="fill-none stroke-primary" />
         </Link>
       </div>
     </LayoutRootIntro>
   );
 }
-
-export default Intro;

@@ -1,5 +1,5 @@
 
-function AppleLogo({ width, ...props }  : string | any) {
+export function AppleLogo({ width, ...props }: string | any) {
   return (
     <svg
       {...props}
@@ -15,5 +15,3 @@ function AppleLogo({ width, ...props }  : string | any) {
     </svg>
   );
 }
-
-export default AppleLogo;

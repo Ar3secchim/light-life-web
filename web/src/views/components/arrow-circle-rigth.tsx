@@ -1,4 +1,4 @@
-function ArrowCircleRight({ width, ...props }) {
+export function ArrowCircleRight({ width, ...props }) {
   return (
     <svg
       {...props}
@@ -22,5 +22,3 @@ function ArrowCircleRight({ width, ...props }) {
     </svg>
   );
 }
-
-export default ArrowCircleRight;

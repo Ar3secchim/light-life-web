@@ -1,10 +1,13 @@
-import AppleLogo from "@views/components/apple-logo";
-import Field from "@views/components/field";
-import GoogleLogo from "@views/components/google-logo";
+import { routes } from "@app/Router/routes";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { AppleLogo } from "@views/components/apple-logo";
+import { Field } from "@views/components/field";
+import { GoogleLogo } from "@views/components/google-logo";
+import { Button } from "@views/components/ui/button";
 import { Input } from "@views/components/ui/input";
-import { Button } from "react-day-picker";
+import { FormProvider, useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-
+import { z } from "zod";
 
 const schemaCreateUserForm = z.object({
   email: z
@@ -62,7 +65,7 @@ export function Login() {
 
           <span className="w-full">
             <Button asChild variant="link" className="p-2">
-              <Link className="w-fit" href="/">
+              <Link className="w-fit" to="/">
                 Esqueceu a senha?
               </Link>
             </Button>
@@ -77,7 +80,7 @@ export function Login() {
       <div className="font-display my-4 flex items-center">
         <span>Novo no Ligth Life?</span>
         <Button asChild variant="link" className="p-2">
-          <Link href="/register"> Criar sua conta</Link>
+          <Link to={routes.singup}> Criar sua conta</Link>
         </Button>
       </div>
 

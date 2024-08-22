@@ -1,4 +1,4 @@
-function ArrowLeft({ width, ...props }) {
+export function ArrowLeft({ width, ...props }) {
   return (
     <svg
       {...props}
@@ -23,5 +23,3 @@ function ArrowLeft({ width, ...props }) {
     </svg>
   );
 }
-
-export default ArrowLeft;

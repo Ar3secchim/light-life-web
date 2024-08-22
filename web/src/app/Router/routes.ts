@@ -1,4 +1,7 @@
 export const routes = {
   login: '/login',
-  register: '/register',
+  singup: '/register',
+  intro: '/intro',
+  introOne: '/intro-one',
+  introTwo: '/intro-two',
 };

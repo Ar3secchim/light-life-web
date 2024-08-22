@@ -1,4 +1,4 @@
-function SwitchPoint({ activePosition, width, ...props }
+export function SwitchPoint({ activePosition, width, ...props }
   : string | any
 ) {
   return (

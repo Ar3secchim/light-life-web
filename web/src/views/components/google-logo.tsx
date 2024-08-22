@@ -1,6 +1,5 @@
-import React from 'react';
 
-function GoogleLogo({ width, props }) {
+export function GoogleLogo({ width, props }) {
   return (
     <svg
       {...props}
@@ -28,4 +27,3 @@ function GoogleLogo({ width, props }) {
   );
 }
 
-export default GoogleLogo;

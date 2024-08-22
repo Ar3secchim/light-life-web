@@ -3,7 +3,7 @@ import { Checkbox } from "@views/components/ui/check";
 import LayoutRoot from "../layout";
 
 
-function Home() {
+export function Home() {
   return (
     <LayoutRoot>
       <div className="flex flex-col p-6">
@@ -28,5 +28,3 @@ function Home() {
     </LayoutRoot>
   );
 }
-
-export default Home;

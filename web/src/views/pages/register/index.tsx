@@ -1,9 +1,9 @@
+import { routes } from '@app/Router/routes';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Label } from '@radix-ui/react-dropdown-menu';
-import Field from '@views/components/field';
+import { Field } from '@views/components/field';
+import { Button } from '@views/components/ui/button';
 import { Input } from '@views/components/ui/input';
-import { Button } from 'react-day-picker';
-
 import { FormProvider, useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { z } from 'zod';
@@ -114,7 +114,7 @@ export function Register() {
         <span>Já tem um conta?</span>
 
         <Button asChild variant="link" className="p-2">
-          <Link to="/login">Faça seu login.</Link>
+          <Link to={routes.login}>Faça seu login.</Link>
         </Button>
       </div>
     </section>

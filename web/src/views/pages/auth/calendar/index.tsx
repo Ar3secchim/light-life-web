@@ -1,10 +1,9 @@
 import { Calendar } from '@views/components/ui/calendar';
+import { LayoutRoot } from '@views/pages/Layout/layoutRoot';
 import { ptBR } from 'date-fns/locale';
 import { useState } from 'react';
 
-import LayoutRoot from '../layout';
-
-function CalendarPage() {
+export function CalendarPage() {
   const [date, setDate] = useState(new Date());
 
   return (
@@ -18,5 +17,3 @@ function CalendarPage() {
     </LayoutRoot>
   );
 }
-
-export default CalendarPage;
