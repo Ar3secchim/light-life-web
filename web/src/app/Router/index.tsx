@@ -1,13 +1,19 @@
+import { lazyLoad } from '@app/utils/lazyLoad';
 import { Suspense } from 'react';
 import { Route, Routes } from "react-router-dom";
+import { routes } from './routes';
 
-import Home from '@views/pages/home';
-import { Intro } from '@views/pages/intro';
-import { IntroOne } from '@views/pages/intro/pageOne';
-import { IntroTwo } from '@views/pages/intro/pageTwo';
-import { Login } from '@views/pages/login';
-import { Register } from '@views/pages/register';
-import { routes } from "./routes";
+const { Login } = lazyLoad(() => import('@views/pages/login'))
+const { Home } = lazyLoad(() => import('@views/pages/home'))
+const { Register } = lazyLoad(() => import('@views/pages/register'))
+
+const { Intro } = lazyLoad(() => import('@views/pages/intro'));
+const { IntroOne } = lazyLoad(() => import('@views/pages/intro/pageOne'))
+const { IntroTwo } = lazyLoad(() => import('@views/pages/intro/pageTwo'))
+
+const { CalendarPage } = lazyLoad(() => import('@views/pages/auth/calendar'))
+const { DashboardTask } = lazyLoad(() => import('@views/pages/auth/dashboardTask'))
+const { HomeTaks } = lazyLoad(() => import('@views/pages/auth/home'))
 
 export function Router() {
   return (
@@ -20,6 +26,10 @@ export function Router() {
         <Route path={routes.intro} element={<Intro />} />
         <Route path={routes.introOne} element={<IntroOne />} />
         <Route path={routes.introTwo} element={<IntroTwo />} />
+
+        <Route path={routes.dashboard} element={<DashboardTask />} />
+        <Route path={routes.calendar} element={<CalendarPage />} />
+        <Route path={routes.home} element={<HomeTaks />} />
       </Routes>
     </Suspense>
   );

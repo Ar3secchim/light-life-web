@@ -1,7 +1,7 @@
+import { cn } from '@app/utils';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
-import { CheckIcon } from 'lucide';
-import * as React from 'react';
-import { cn } from '../lib/lib';
+import { CheckIcon } from 'lucide-react';
+import React from 'react';
 
 const Checkbox = React.forwardRef(({ className, ...props }, ref) => (
   <CheckboxPrimitive.Root

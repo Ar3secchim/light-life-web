@@ -1,18 +1,16 @@
-import { TabsContent } from '@radix-ui/react-tabs';
+import { routes } from '@app/Router/routes';
 import { Avatar, AvatarFallback, AvatarImage } from '@views/components/ui/avatar';
-import { NavigationList, NavigationTrigger } from '@views/components/ui/navigation';
 
-import { BotIcon, CalendarDays, ChevronDown, ChevronLeft, ChevronRight, HomeIcon, Navigation, UserRound } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+import { BotIcon, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 export function LayoutRoot({ children }) {
-  const router = useRouter();
+  const location = useLocation()
 
   return (
     <section className="flex h-screen flex-col justify-between">
       <div className="sticky flex h-24 w-full gap-8 rounded-b-[20px] bg-[#00bb1009] p-6 shadow-lg">
-        {router.pathname.includes('/auth/calendar') !== true ? (
+        {location.pathname.includes(routes.calendar) !== true ? (
           <>
             <Avatar>
               <AvatarImage src={<BotIcon />} />
@@ -41,24 +39,24 @@ export function LayoutRoot({ children }) {
         )}
       </div>
 
-      <div className="h-full">{children}</div>
-      <Navigation>
+      <div className="h-full ">{children}</div>
+      {/* <Navigation>
         <NavigationList>
-          <Link href="/auth/home">
-            <NavigationTrigger value="/auth/home">
+          <Link to={routes.home}>
+            <NavigationTrigger value={routes.home}>
               <HomeIcon size={28} />
-              <TabsContent value="/auth/home">Home</TabsContent>
+              <TabsContent value={routes.home}>Home</TabsContent>
             </NavigationTrigger>
           </Link>
 
-          <Link href="/auth/dashboardTask">
+          <Link to={routes.dashboard}>
             <NavigationTrigger value="task">
-              <ListCheck size={26} />
+              <ListChecks size={26} />
               <TabsContent value="task">Tarefas</TabsContent>
             </NavigationTrigger>
           </Link>
 
-          <Link href="/auth/calendar">
+          <Link to={routes.calendar}>
             <NavigationTrigger value="calendar">
               <CalendarDays size={26} />
               <TabsContent value="calendar">Calendário</TabsContent>
@@ -70,7 +68,7 @@ export function LayoutRoot({ children }) {
             <TabsContent value="user">Perfil</TabsContent>
           </NavigationTrigger>
         </NavigationList>
-      </Navigation>
+      </Navigation> */}
     </section>
   );
 }

@@ -4,4 +4,7 @@ export const routes = {
   intro: '/intro',
   introOne: '/intro-one',
   introTwo: '/intro-two',
+  dashboard: '/auth/dashboard-task',
+  home: '/auth/home',
+  calendar: '/auth/calendar-page',
 };

@@ -1,6 +1,7 @@
 import { routes } from "@app/Router/routes";
-import { ArrowCircleRight } from "@views/components/arrow-circle-rigth";
+
 import { SwitchPoint } from "@views/components/switch-point";
+import { ArrowRightCircleIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import { LayoutRootIntro } from "../Layout/layoutIntro";
 
@@ -23,9 +24,10 @@ export function Intro() {
       </div>
 
       <div className="flex w-full justify-between">
+
         <SwitchPoint width={40} />
-        <Link to={routes.introTwo}>
-          <ArrowCircleRight width={32} className="fill-none stroke-primary" />
+        <Link to={routes.introOne}>
+          <ArrowRightCircleIcon width={32} className="fill-none stroke-primary" />
         </Link>
       </div>
     </LayoutRootIntro>

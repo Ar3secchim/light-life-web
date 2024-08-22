@@ -2,7 +2,7 @@ import { routes } from "@app/Router/routes";
 import { Button } from "@views/components/ui/button";
 import { Link } from "react-router-dom";
 
-export default function Home() {
+export function Home() {
   return (
     <section className="mx-6 flex h-screen flex-col items-center justify-center gap-7">
       <h1 className="text-center text-2xl font-extrabold">

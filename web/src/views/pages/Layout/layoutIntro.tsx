@@ -1,21 +1,21 @@
-import { ArrowLeft } from '@views/components/arrow-left';
+import { routes } from '@app/Router/routes';
+import { Button } from '@views/components/ui/button';
+import { ArrowLeftCircle } from 'lucide-react';
 
-import { Button } from 'react-day-picker';
 import { Link } from 'react-router-dom';
 
-export function LayoutRootIntro({ children }) {
-  const router = useRouter();
+export function LayoutRootIntro({ children }: React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>) {
 
   return (
     <section className="bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(119, 198, 181, 0.541),rgba(255,255,255,0))] absolute top-0 z-[-2] h-screen w-screen bg-white">
       <div className="mx-6 flex h-screen flex-col pt-4">
         <div className="flex items-center justify-between">
-          <Button asChild onClick={() => router.back()}>
-            <ArrowLeft className="stroke-primary" />
+          <Button size="icon" className='bg-transparent text-primary'>
+            <ArrowLeftCircle />
           </Button>
 
-          <Button size="md" className="font-display px-0 text-primary">
-            <Link href="/auth/home">Pular</Link>
+          <Button size="sm" className="font-display px-0 text-primary bg-transparent">
+            <Link to={routes.login}>Pular</Link>
           </Button>
         </div>
 
@@ -23,6 +23,6 @@ export function LayoutRootIntro({ children }) {
           {children}
         </div>
       </div>
-    </section>
+    </section >
   );
 }

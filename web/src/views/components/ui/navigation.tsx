@@ -1,11 +1,14 @@
 import { cn } from '@app/utils';
+import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
 import * as TabsPrimitive from '@radix-ui/react-tabs';
-import * as React from 'react';
-
+import React from 'react';
 
 const Navigation = TabsPrimitive.Root;
 
-const NavigationList = React.forwardRef(({ className, ...props }, ref) => (
+const NavigationList = React.forwardRef<
+  React.ElementRef<typeof NavigationMenuPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
+>(({ className, children, ...props }, ref) => (
   <TabsPrimitive.List
     ref={ref}
     className={cn(
@@ -17,7 +20,10 @@ const NavigationList = React.forwardRef(({ className, ...props }, ref) => (
 ));
 NavigationList.displayName = TabsPrimitive.List.displayName;
 
-const NavigationTrigger = React.forwardRef(({ className, ...props }, ref) => (
+const NavigationTrigger = React.forwardRef<
+  React.ElementRef<typeof NavigationMenuPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
+>(({ className, children, ...props }, ref) => (
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
@@ -29,7 +35,10 @@ const NavigationTrigger = React.forwardRef(({ className, ...props }, ref) => (
 ));
 NavigationTrigger.displayName = TabsPrimitive.Trigger.displayName;
 
-const NavigationContent = React.forwardRef(({ className, ...props }, ref) => (
+const NavigationContent = React.forwardRef<
+  React.ElementRef<typeof NavigationMenuPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
+>(({ className, children, ...props }, ref) => (
   <TabsPrimitive.Content
     ref={ref}
     className={cn(

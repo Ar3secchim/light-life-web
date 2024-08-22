@@ -1,8 +1,8 @@
 import { routes } from '@app/Router/routes';
 import SwitchPoint from '@views/components/switch-point';
+import { Button } from '@views/components/ui/button';
 
 import { LayoutRootIntro } from '@views/pages/Layout/layoutIntro';
-import { Button } from 'react-day-picker';
 import { Link } from 'react-router-dom';
 
 export function IntroTwo() {
@@ -28,7 +28,7 @@ export function IntroTwo() {
 
       <div className="flex w-full justify-between">
         <SwitchPoint width={40} />
-        <Button asChild size="md" className="px-4">
+        <Button size="sm" className="px-4">
           <Link to={routes.login}>Vou me comprometer</Link>
         </Button>
       </div>

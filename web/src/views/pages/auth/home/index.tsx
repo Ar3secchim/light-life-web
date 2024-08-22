@@ -1,9 +1,8 @@
 import { Label } from "@radix-ui/react-dropdown-menu";
 import { Checkbox } from "@views/components/ui/check";
-import LayoutRoot from "../layout";
+import { LayoutRoot } from "@views/pages/Layout/layoutRoot";
 
-
-export function Home() {
+export function HomeTaks() {
   return (
     <LayoutRoot>
       <div className="flex flex-col p-6">
@@ -18,7 +17,7 @@ export function Home() {
                 className="text-lg font-bold text-gray-800"
               >
                 Tasks
-                {' '}
+
                 {index}
               </Label>
             </li>
