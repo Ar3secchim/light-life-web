@@ -1,5 +1,5 @@
 
-export function GoogleLogo({ width, props }) {
+export function GoogleLogo({ width, props }: string | any) {
   return (
     <svg
       {...props}

@@ -2,13 +2,17 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
+    fontFamily: {
+      SFPro: ["SFPro", "sans-serif"],
+      SFRoud: ["SFRoud", "sans-serif"],
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -72,12 +76,12 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       boxShadow: {
-        'lg-invert':
-          '0 -12px 15px -5px rgb(0 0 0 / 0.1), 0 -5px 6px -5px rgb(0 0 0 / 0.1);',
-        lg: '0 12px 15px -5px rgb(0 0 0 / 0.1), 0 5px 6px -5px rgb(0 0 0 / 0.1);',
+        "lg-invert":
+          "0 -12px 15px -5px rgb(0 0 0 / 0.1), 0 -5px 6px -5px rgb(0 0 0 / 0.1);",
+        lg: "0 12px 15px -5px rgb(0 0 0 / 0.1), 0 5px 6px -5px rgb(0 0 0 / 0.1);",
       },
     },
   },
 
   plugins: [require("tailwindcss-animate")],
-}
+};

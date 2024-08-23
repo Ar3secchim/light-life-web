@@ -1,15 +1,16 @@
-import { routes } from "@app/Router/routes";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { FormProvider, useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
+import { z } from "zod";
+
+import { routes } from "@app/Router/routes";
 import { AppleLogo } from "@views/components/apple-logo";
 import { Field } from "@views/components/field";
 import { GoogleLogo } from "@views/components/google-logo";
 import { Button } from "@views/components/ui/button";
 import { Input } from "@views/components/ui/input";
-import { FormProvider, useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
-import { z } from "zod";
 
-const schemaCreateUserForm = z.object({
+const schemaLoginUserForm = z.object({
   email: z
     .string()
     .min(1, { message: 'email obrigátorio' })
@@ -20,8 +21,8 @@ const schemaCreateUserForm = z.object({
 });
 
 export function Login() {
-  const createUserForm = useForm({
-    resolver: zodResolver(schemaCreateUserForm),
+  const LoginUserForm = useForm({
+    resolver: zodResolver(schemaLoginUserForm),
     mode: 'onSubmit',
   });
 
@@ -30,36 +31,36 @@ export function Login() {
   const {
     handleSubmit,
     formState: { errors },
-  } = createUserForm;
+  } = LoginUserForm;
 
   return (
     <section className="m-4 mx-6 flex h-screen flex-col items-center justify-center">
-      <h1 className="my-8 text-center text-2xl font-extrabold">
+      <h1 className="my-8 text-center text-2xl font-extrabold ">
         Bem vindo ao
-        <span className="text-primary">Ligth Life</span>
+        <span className="text-primary"> Ligth Life</span>
       </h1>
 
-      <FormProvider {...createUserForm}>
+      <FormProvider {...LoginUserForm}>
         <form
           className="flex w-full flex-col items-center gap-3"
           onSubmit={handleSubmit(onSubmit)}
         >
           <Field>
             <Input
-              label="Email"
+              label="Seu email"
               name="email"
               placeholder="email@gmail.com"
-              error={errors.email ? 'true' : ''}
+              error={errors.email ? true : false}
             />
           </Field>
 
           <Field>
             <Input
-              label="Senha"
+              label="Sua senha"
               name="password"
               type="password"
               placeholder="••••••"
-              error={errors.password ? 'true' : ''}
+              error={errors.password ? true : false}
             />
           </Field>
 
@@ -86,14 +87,14 @@ export function Login() {
 
       <div className="flex gap-4">
         <Button
-          variant="icon"
+          variant="outline"
           className="rounded-xl border border-secondary hover:bg-secondary"
         >
           <GoogleLogo />
         </Button>
 
         <Button
-          variant="icon"
+          variant="outline"
           className="rounded-xl border border-secondary hover:bg-secondary"
         >
           <AppleLogo />

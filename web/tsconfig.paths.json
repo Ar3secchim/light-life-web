@@ -2,7 +2,8 @@
   "compilerOptions": {
     "paths": {
       "@app/*": ["./src/app/*"],
-      "@views/*": ["./src/views/*"]
+      "@views/*": ["./src/views/*"],
+      "@img/*": ["./public/svgs/*"]
     }
   }
 }

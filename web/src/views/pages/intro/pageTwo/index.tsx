@@ -1,9 +1,11 @@
-import { routes } from '@app/Router/routes';
-import SwitchPoint from '@views/components/switch-point';
-import { Button } from '@views/components/ui/button';
-
-import { LayoutRootIntro } from '@views/pages/Layout/layoutIntro';
 import { Link } from 'react-router-dom';
+
+import { routes } from '@app/Router/routes';
+import { Button } from '@views/components/ui/button';
+import { LayoutRootIntro } from '@views/pages/Layout/layoutIntro';
+
+import IntroTwoImg from '@img/IntroTwoImg.svg?react';
+import SwitchPoint from '@views/components/switch-point';
 
 export function IntroTwo() {
   return (
@@ -11,7 +13,7 @@ export function IntroTwo() {
       <h1 className="text-2xl font-bold text-primary">
         Ambiente é a sua chave!
       </h1>
-
+      <IntroTwoImg />
       <div className="text-md text-secondary-dark-500 text-center font-semibold">
         <p className="pb-4">
           Desenvolva um ambiente que module seu comportamento! Se quer realizar
