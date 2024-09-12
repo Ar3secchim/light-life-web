@@ -1,10 +1,12 @@
 import { routes } from '@app/Router/routes';
 import { Avatar, AvatarFallback, AvatarImage } from '@views/components/ui/avatar';
 
-import { BotIcon, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 
-export function LayoutRoot({ children }) {
+import { ReactNode } from 'react';
+
+export function LayoutRoot({ children }: { children: ReactNode }) {
   const location = useLocation()
 
   return (
@@ -13,7 +15,7 @@ export function LayoutRoot({ children }) {
         {location.pathname.includes(routes.calendar) !== true ? (
           <>
             <Avatar>
-              <AvatarImage src={<BotIcon />} />
+              <AvatarImage src="path/to/your/image.png" />
               <AvatarFallback>RS</AvatarFallback>
             </Avatar>
 

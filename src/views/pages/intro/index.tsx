@@ -4,7 +4,6 @@ import { ArrowRightCircleIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import { LayoutRootIntro } from "../Layout/layoutIntro";
 
-import IntroImg from '@img/IntroImg.svg?react';
 import SwitchPoint from "@views/components/switch-point";
 
 export function Intro() {
@@ -14,7 +13,6 @@ export function Intro() {
         Começando pelo o começo
       </h1>
 
-      <IntroImg />
       <div className="text-md text-secondary-dark-500 text-center font-semibold">
         <p className="pb-4">
           Primeiro você tem que decidir aonde quer chegar. Com isso claro, damos

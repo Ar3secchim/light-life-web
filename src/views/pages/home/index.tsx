@@ -2,8 +2,6 @@ import { routes } from "@app/Router/routes";
 import { Button } from "@views/components/ui/button";
 import { Link } from "react-router-dom";
 
-import HomeImg from "@img/HomeImg.svg?react";
-
 export function Home() {
   return (
     <section className="mx-6 flex h-screen flex-col items-center justify-center gap-7">
@@ -12,7 +10,6 @@ export function Home() {
         <path d="M184 -22C184 33.2285 139.228 78 84 78C28.7715 78 -16 33.2285 -16 -22C-16 -77.2285 28.7715 -122 84 -122C139.228 -122 184 -77.2285 184 -22Z" fill="#34786A" fill-opacity="0.5" />
       </svg>
 
-      <HomeImg />
       <h1 className="text-center text-3xl font-bold font-SFRoud">
         Conquiste seus objetivos com
         <span className="text-primary  font-SFRoud"> Ligth Life</span>

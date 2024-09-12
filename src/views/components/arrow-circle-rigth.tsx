@@ -1,4 +1,9 @@
-export function ArrowCircleRight({ width, ...props }) {
+interface ArrowCircleRightProps {
+  width?: string;
+  [key: string]: any;
+}
+
+export function ArrowCircleRight({ width, ...props }: ArrowCircleRightProps) {
   return (
     <svg
       {...props}

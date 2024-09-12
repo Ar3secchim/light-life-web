@@ -26,7 +26,7 @@ export function Login() {
     mode: 'onSubmit',
   });
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data: any) => console.log(data);
 
   const {
     handleSubmit,

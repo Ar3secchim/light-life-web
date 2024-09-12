@@ -3,7 +3,7 @@
     "paths": {
       "@app/*": ["./src/app/*"],
       "@views/*": ["./src/views/*"],
-      "@img/*": ["./public/svgs/*"]
+      "@assets/*": ["./src/assets/*"]
     }
   }
 }

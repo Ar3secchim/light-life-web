@@ -15,7 +15,7 @@ export default defineConfig({
     alias: {
       '@app': path.resolve(__dirname, 'src', 'app'),
       '@views': path.resolve(__dirname, 'src', 'views'),
-      '@img': path.resolve(__dirname, 'public', 'svgs'),
+      '@assets': path.resolve(__dirname, 'src', 'assets'),
     },
   },
 })

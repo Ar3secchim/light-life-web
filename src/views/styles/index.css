@@ -5,13 +5,13 @@
 @layer base {
   @font-face {
     font-family: 'SFPro';
-    src: url("../../../public/fonts/SF-Pro/SF-Pro.ttf")
+    src: url("/src/views/styles/fonts/SF-Pro/SF-Pro.ttf")
   }
 
   @font-face {
     font-family: 'SFRoud';
     font-weight: 400;
-    src: url("../../../public/fonts/SF-Roudend/SF-Pro-Rounded-Regular.otf")
+    src: url("/src/views/styles/fonts/SF-Roudend/SF-Pro-Rounded-Regular.otf")
   }
 
   :root {

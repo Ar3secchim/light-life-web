@@ -1,4 +1,6 @@
-export function ArrowLeft({ width, ...props }) {
+import { IPropsSvgs } from "@app/interface/IPropsSvgs";
+
+export function ArrowLeft({ width, ...props }: IPropsSvgs) {
   return (
     <svg
       {...props}
