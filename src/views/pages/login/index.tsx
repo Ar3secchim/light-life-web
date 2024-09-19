@@ -78,9 +78,9 @@ export function Login() {
         </form>
       </FormProvider>
 
-      <div className="font-display my-4 flex items-center">
+      <div className="font-display text-sm flex my-2 items-center">
         <span>Novo no Ligth Life?</span>
-        <Button asChild variant="link" className="p-2">
+        <Button asChild variant="link" className="p-2 dark:text-primary ">
           <Link to={routes.singup}> Criar sua conta</Link>
         </Button>
       </div>
@@ -88,14 +88,14 @@ export function Login() {
       <div className="flex gap-4">
         <Button
           variant="outline"
-          className="rounded-xl border border-secondary hover:bg-secondary"
+          className="rounded-xl py-6 border border-secondary hover:bg-secondary dark:hover:bg-primary dark:bg-[#12f7c50e]"
         >
           <GoogleLogo />
         </Button>
 
         <Button
           variant="outline"
-          className="rounded-xl border border-secondary hover:bg-secondary"
+          className="flex justify-center rounded-xl px-3 py-6 border border-secondary hover:bg-secondary dark:hover:bg-primary dark:bg-[#12f7c50e]"
         >
           <AppleLogo />
         </Button>

@@ -95,7 +95,7 @@ export function Register() {
           </Field>
 
           <span className="w-full">
-            <Button asChild variant="link" className="p-2">
+            <Button asChild variant="link" className="p-2 dark:text-primary">
               <Link className="w-fit" to="/">
                 Esqueceu a senha?
               </Link>
@@ -108,10 +108,10 @@ export function Register() {
         </form>
       </FormProvider>
 
-      <div className="my-4 flex w-full items-center justify-center text-center">
+      <div className="my-2 flex w-full items-center justify-center text-center text-sm">
         <span>Já tem um conta?</span>
 
-        <Button asChild variant="link" className="p-2">
+        <Button asChild variant="link" className="p-2 dark:text-primary ">
           <Link to={routes.login}>Faça seu login.</Link>
         </Button>
       </div>

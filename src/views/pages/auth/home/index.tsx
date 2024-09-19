@@ -5,7 +5,7 @@ export function HomeTaks() {
   return (
     <LayoutRoot>
       <div className="flex flex-col p-6">
-        <h1 className="text-xl font-bold">Tasks do dia </h1>
+        <h1 className="text-xl font-mediun">Tasks do dia </h1>
 
         <ul className="mt-8 flex flex-col gap-4">
           {[...Array(5)].map((_, index) => (
@@ -13,10 +13,9 @@ export function HomeTaks() {
               <Checkbox key={index} id={index.toString()} />
               <label
                 htmlFor={index.toString()}
-                className="text-lg font-bold text-gray-800"
+                className="text-lg font-SFPro font-bold text-gray-800 dark:text-gray-200"
               >
                 Tasks
-
                 {index}
               </label>
             </li>

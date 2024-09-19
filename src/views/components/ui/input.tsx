@@ -8,7 +8,7 @@ import Label from '../label';
 
 
 const inputVariants = cva(
-  'h-10 rounded-lg border bg-tr px-2 font-sans font-light placeholder-secondary-dark-200 border-gray-100 focus:outline-gray-100', {
+  'h-10 rounded-lg border px-2 font-sans font-light text-sm placeholder-secondary-dark-200 border-gray-100 focus:outline-gray-100 dark:bg-input dark:placeholder-primary', {
   variants: {
     sizeVariant: {
       default: 'h-10 px-2',

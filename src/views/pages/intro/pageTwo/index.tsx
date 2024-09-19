@@ -22,14 +22,14 @@ export function IntroTwo() {
         <p>
           Tenha pessoas com o mesmo propósito junto com você! E não tenha duvida
           que o
-          <span className="font-bold text-primary">Light Life</span>
+          <span className="font-bold text-primary"> Light Life </span>
           estará com você em cada etapa do processo.
         </p>
       </div>
 
       <div className="flex w-full justify-between">
         <SwitchPoint width={40} />
-        <Button size="sm" className="px-4">
+        <Button size="sm" className="px-4 rounded-lg dark:text-white">
           <Link to={routes.login}>Vou me comprometer</Link>
         </Button>
       </div>

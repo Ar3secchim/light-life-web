@@ -1,7 +1,7 @@
 import { routes } from '@app/Router/routes';
 import { Avatar, AvatarFallback, AvatarImage } from '@views/components/ui/avatar';
 
-import { ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronDown, ChevronLeft, ChevronRight, SunriseIcon } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 
 import { ReactNode } from 'react';
@@ -11,7 +11,7 @@ export function LayoutRoot({ children }: { children: ReactNode }) {
 
   return (
     <section className="flex h-screen flex-col justify-between">
-      <div className="sticky flex h-24 w-full gap-8 rounded-b-[20px] bg-[#00bb1009] p-6 shadow-lg">
+      <div className="sticky flex h-24 w-full gap-8 rounded-b-[20px] bg-[#222225] p-6 shadow-lg">
         {location.pathname.includes(routes.calendar) !== true ? (
           <>
             <Avatar>
@@ -20,7 +20,10 @@ export function LayoutRoot({ children }: { children: ReactNode }) {
             </Avatar>
 
             <div className="font-bold text-primary">
-              <p>Boa tarde, Renara!</p>
+              <span className='flex gap-1'>
+                <SunriseIcon width={21} />
+                <p>Boa tarde, Renara!</p>
+              </span>
               <p>Seguindo o plano por 10 dias</p>
             </div>
           </>
