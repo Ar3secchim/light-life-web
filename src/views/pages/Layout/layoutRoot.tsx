@@ -11,7 +11,7 @@ export function LayoutRoot({ children }: { children: ReactNode }) {
 
   return (
     <section className="flex h-screen flex-col justify-between">
-      <div className="sticky flex h-24 w-full gap-8 rounded-b-[20px] bg-[#222225] p-6 shadow-lg">
+      <div className="sticky flex h-24 w-full gap-8 rounded-b-[20px] dark:bg-[#222225] p-6 shadow-lg">
         {location.pathname.includes(routes.calendar) !== true ? (
           <>
             <Avatar>
