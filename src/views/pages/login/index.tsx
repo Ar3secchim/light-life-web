@@ -9,6 +9,7 @@ import { Field } from "@views/components/field";
 import { GoogleLogo } from "@views/components/google-logo";
 import { Button } from "@views/components/ui/button";
 import { Input } from "@views/components/ui/input";
+import console from "console";
 
 const schemaLoginUserForm = z.object({
   email: z
@@ -26,7 +27,7 @@ export function Login() {
     mode: 'onSubmit',
   });
 
-  const onSubmit = (data: any) => console.log(data);
+  const onSubmit = async (data: any) => console.log(data);
 
   const {
     handleSubmit,
