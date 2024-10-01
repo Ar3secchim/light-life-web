@@ -43,10 +43,10 @@ export function Register() {
 
   return (
     <section className="m-4 mx-6 flex h-screen flex-col items-center justify-center">
-      <h1 className="text-center text-2xl font-extrabold">
+      <h1 className="text-center text-2xl font-extrabold font-SFRoud">
         Bem vindo a bordo!
       </h1>
-      <h2 className="mb-8 text-xl font-bold text-primary">
+      <h2 className="mb-8 text-lg font-bold text-primary">
         Vamos ajudá-lo a seguir seus hábitos
       </h2>
 
@@ -57,20 +57,20 @@ export function Register() {
         >
           <Field>
             <Input
-              label='Email'
-              name="email"
-              placeholder="email@gmail.com"
-              error={errors.email ? true : false}
+              label='Nome'
+              name="name"
+              type="name"
+              placeholder="Nome"
+              error={errors.name ? true : false}
             />
           </Field>
 
           <Field>
             <Input
-              label='Nome'
-              name="name"
-              type="name"
-              placeholder="Nome e Sobrenome"
-              error={errors.name ? true : false}
+              label='Email'
+              name="email"
+              placeholder="email@emailexemple.com"
+              error={errors.email ? true : false}
             />
           </Field>
 
